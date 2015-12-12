@@ -1,0 +1,20 @@
+import {Component, CORE_DIRECTIVES} from "angular2/angular2";
+import Hero from "./hero";
+import heroService from "./heroService";
+
+@Component({
+    selector: 'hero-form',
+    templateUrl: 'src/app/hero-form.html'
+})
+export default class HeroFormComponent {
+    public powers:string[] = ['Smart', 'Flexible', 'Hot', 'Strong'];
+    public model:Hero = new Hero(18, 'Julia', this.powers[1], 'Meee');
+    public submitted:Boolean = false;
+
+    constructor(public heroService:heroService) {}
+
+    onSubmit() {
+        this.submitted = true;
+        this.heroService.addHero(this.model.name);
+    }
+}

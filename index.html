@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Angular 2 Learning</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+
+    <script src="https://code.angularjs.org/2.0.0-alpha.47/angular2.dev.js"></script>
+    <script>
+      System.config({
+        packages: {'src/app': {defaultExtension: 'js'}}
+      });
+      System.import('src/app/app');
+    </script>
+  </head>
+  <body>
+    <my-app></my-app>
+  </body>
+</html>
