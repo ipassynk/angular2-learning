@@ -15,6 +15,6 @@ export default class HeroFormComponent {
 
     onSubmit() {
         this.submitted = true;
-        this.heroService.addHero(this.model.name);
+        this.heroService.addHero(new Hero(1, this.model.name, this.powers[1]));
     }
 }

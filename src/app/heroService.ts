@@ -1,8 +1,9 @@
+import Hero from "./hero";
+
 export default class heroService {
-    public heroes:Array<string> = ['Julia', 'Eugene'];
+    public heroes:Hero[] = [];
 
-    addHero(hero:string) {
+    addHero(hero:Hero) {
         this.heroes.push(hero);
-
     }
 }
