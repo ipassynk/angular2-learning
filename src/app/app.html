@@ -5,12 +5,12 @@
 
     <hero-form></hero-form>
 
-    <hr>
+    <hr [style.background]="'lime'" [style.height]="'10px'">
 
     <control-form #formctrl></control-form>
 
     <ul class="list-group">
-        <li class="list-group-item" *ng-for="#p of formctrl.selectedField">
+        <li  Highlight class="list-group-item" *ng-for="#p of formctrl.selectedField">
             {{ p }}
         </li>
     </ul>
