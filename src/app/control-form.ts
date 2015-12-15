@@ -4,7 +4,6 @@ import {Component, FORM_DIRECTIVES, ControlGroup, Control} from "angular2/angula
     selector: 'control-form',
     template: `
        <form [ng-form-model]="form">
-
            <label>Rate <input type="checkbox" ng-control="rate"></label>
            <label>Location <input type="checkbox" ng-control="location"></label>
            <label>Address <input type="text" ng-control="location"></label>
