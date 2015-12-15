@@ -8,11 +8,12 @@ import {
 
 import LittleTour from './littleHero';
 import HeroFormComponent from "./hero-form";
+import ControlFormComponent from "./control-form";
 
 @Component({
     selector: 'my-app',
     templateUrl: 'src/app/app.html',
-    directives: [LittleTour, HeroFormComponent],
+    directives: [LittleTour, HeroFormComponent, ControlFormComponent],
 })
 class AppComponent {
 }

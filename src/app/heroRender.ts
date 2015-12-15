@@ -18,7 +18,7 @@ import Hero from "./hero";
     `],
     template: `
         <div [ng-class]="getHeroClass()" class="hero">
-        {{ hero.name }} | {{ hero.power }}
+            {{ hero.name }} | {{ hero.power }}
         </div>
     `
 })
