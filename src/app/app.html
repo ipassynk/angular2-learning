@@ -1,17 +1,7 @@
 <div class="container" style="color:darkred;">
-    <little-tour></little-tour>
-
+    <a [router-link]="['./Page1']">page1</a>
+    <a [router-link]="['./Page2']">page2</a>
     <hr>
+    <router-outlet></router-outlet>
 
-    <hero-form></hero-form>
-
-    <hr [style.background]="'lime'" [style.height]="'10px'">
-
-    <control-form #formctrl></control-form>
-
-    <ul class="list-group">
-        <li  Highlight class="list-group-item" *ng-for="#p of formctrl.selectedField">
-            {{ p }}
-        </li>
-    </ul>
 </div>

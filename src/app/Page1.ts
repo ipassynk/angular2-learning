@@ -1,0 +1,14 @@
+import {Component} from "angular2/angular2";
+
+import LittleTour from './littleHero';
+
+@Component({
+    selector: "page1",
+    template:  `
+        <little-tour></little-tour>
+    `,
+    directives: [LittleTour]
+})
+export default class Page1 {
+
+}

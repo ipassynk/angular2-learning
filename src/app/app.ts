@@ -3,20 +3,44 @@ import heroService from "./heroService";
 import {
     Component,
     Attribute,
-    bootstrap
+    bootstrap,
+    provide
 } from 'angular2/angular2';
 
-import LittleTour from './littleHero';
-import HeroFormComponent from "./hero-form";
-import ControlFormComponent from "./control-form";
-import Highlight from "./Highlight";
+import {
+    RouteConfig,
+    RouterLink,
+    RouterOutlet,
+    Route,
+    ROUTER_DIRECTIVES,
+    ROUTER_PROVIDERS,
+    Location,
+    LocationStrategy,
+    HashLocationStrategy,
+    Router
+}
+    from 'angular2/router';
 
+import Page1 from "./Page1";
+import Page2 from "./Page2";
+
+@RouteConfig([
+    {path: '/page1', component: Page1, as: 'Page1'},
+    {path: '/page2', component: Page2, as: 'Page2'}
+])
 @Component({
     selector: 'my-app',
     templateUrl: 'src/app/app.html',
-    directives: [LittleTour, HeroFormComponent, ControlFormComponent, Highlight],
+    directives: [ROUTER_DIRECTIVES, Page1, Page2]
 })
 class AppComponent {
+    router: Router;
+    location: Location;
+
+    constructor(router: Router, location: Location) {
+        this.router = router;
+        this.location = location;
+    }
 }
 
-bootstrap(AppComponent, [heroService]);
+bootstrap(AppComponent, [heroService, ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
