@@ -7,18 +7,19 @@ import Highlight from "./Highlight";
 @Component({
     selector: "page2",
     template:  `
-    <hero-form></hero-form>
+        <h1>Page 2</h1>
+        <hero-form></hero-form>
 
-    <hr [style.background]="'lime'" [style.height]="'10px'">
+        <hr [style.background]="'lime'" [style.height]="'10px'">
 
-    <control-form #formctrl></control-form>
+        <control-form #formctrl></control-form>
 
-    <ul class="list-group">
-        <li Highlight class="list-group-item" *ng-for="#p of formctrl.selectedField">
-            {{ p }}
-        </li>
-    </ul>
-`,
+        <ul class="list-group">
+            <li Highlight class="list-group-item" *ng-for="#p of formctrl.selectedField">
+                {{ p }}
+            </li>
+        </ul>
+    `,
     directives: [Highlight, ControlFormComponent, HeroFormComponent]
 })
 export default class Page2 {

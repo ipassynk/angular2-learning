@@ -7,7 +7,7 @@ import {Component, EventEmitter, Input, Output, CORE_DIRECTIVES} from "angular2/
             <h3>{{ title }} </h3>
             <ul>
                 <li *ng-for="#p of items">
-                    <label>{{ p }}: <input type="checkbox" (click)="update($event, p)" [checked]="state==='y'"></label>
+                    <label><input type="checkbox" (click)="update($event, p)" [checked]="state==='y'"/>{{ p }}</label>
                 </li>
             </ul>
         </div>

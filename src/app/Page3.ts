@@ -18,11 +18,11 @@ import ItemList from "./ItemList";
             <item-list title="Passive status" [items]="passiveItems" (status-change)="pStatus($event)" state="n"></item-list>
         </div>
     `
-    , directives: [SearchBox, ItemList]
+    ,directives: [SearchBox, ItemList]
 })
 export default class Page3 {
     public filter:string;
-    public activeItems:Array<string> = ["julia", "vadim"];
+    public activeItems:Array<string> = ["bluberry", "banana"];
     public passiveItems:Array<string> = ["apple", "orange"];
 
     onUpdate(value) {
