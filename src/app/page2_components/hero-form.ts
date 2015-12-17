@@ -1,10 +1,10 @@
 import {Component, CORE_DIRECTIVES} from "angular2/angular2";
-import Hero from "./hero";
-import heroService from "./heroService";
+import Hero from "./../model/hero";
+import heroService from "./../services/heroService";
 
 @Component({
     selector: 'hero-form',
-    templateUrl: 'src/app/hero-form.html'
+    templateUrl: 'src/app/page2_components/hero-form.html'
 })
 export default class HeroFormComponent {
     public powers:string[] = ['Smart', 'Flexible', 'Hot', 'Strong'];

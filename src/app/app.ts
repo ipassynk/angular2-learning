@@ -1,4 +1,4 @@
-import heroService from "./heroService";
+import heroService from "./services/heroService";
 
 import {
     Component,

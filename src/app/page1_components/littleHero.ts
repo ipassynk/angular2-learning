@@ -1,7 +1,7 @@
-import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
+import {Component, CORE_DIRECTIVES} from "angular2/angular2";
 
-import heroService from "./heroService";
-import Hero from "./hero";
+import heroService from "./../services/heroService";
+import Hero from "./../model/hero";
 import heroRender from "./heroRender";
 
 @Component({

@@ -1,6 +1,6 @@
 import {Component} from "angular2/angular2";
 
-import LittleTour from './littleHero';
+import LittleTour from './page1_components/littleHero';
 
 @Component({
     selector: "page1",

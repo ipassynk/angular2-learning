@@ -12,7 +12,7 @@ import {Component, EventEmitter, Input, Output, CORE_DIRECTIVES} from "angular2/
             </ul>
         </div>
     `,
-    input: ['title', 'items', 'state'],
+    inputs: ['title', 'items', 'state'],
     outputs: ['switchStatus: statusChange'],
     directives: [CORE_DIRECTIVES]
 })

@@ -1,5 +1,5 @@
 import {Component, Input, CORE_DIRECTIVES} from "angular2/angular2";
-import Hero from "./hero";
+import Hero from "./../model/hero";
 
 @Component({
     selector: 'hero-render',
