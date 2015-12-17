@@ -2,6 +2,7 @@ import {Component} from "angular2/angular2";
 
 import SearchBox from "./page3_components/SearchBox";
 import ItemList from "./page3_components/ItemList";
+import ItemService from "./services/itemService"
 
 @Component({
     selector: "page3",
@@ -22,21 +23,21 @@ import ItemList from "./page3_components/ItemList";
 })
 export default class Page3 {
     public filter:string;
-    public activeItems:Array<string> = ["bluberry", "banana"];
-    public passiveItems:Array<string> = ["apple", "orange"];
+    public activeItems:Array<string> = this.itemService.activeItems;
+    public passiveItems:Array<string> = this.itemService.passiveItems;
+
+    constructor(public itemService: ItemService) {}
 
     onUpdate(value) {
         this.filter = value;
     }
 
     pStatus(val) {
-        this.passiveItems = this.passiveItems.filter((n)=> n !== val.name);
-        this.activeItems.push(val.name);
+        this.itemService.pStatus(val);
     }
 
     aStatus(val) {
-        this.activeItems = this.activeItems.filter((n)=> n !== val.name);
-        this.passiveItems.push(val.name);
+        this.itemService.aStatus(val);
     }
 
 }

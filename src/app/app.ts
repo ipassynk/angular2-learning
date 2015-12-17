@@ -1,4 +1,5 @@
 import heroService from "./services/heroService";
+import ItemService from "./services/itemService";
 
 import {
     Component,
@@ -45,4 +46,4 @@ class AppComponent {
     }
 }
 
-bootstrap(AppComponent, [heroService, ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
+bootstrap(AppComponent, [heroService, ItemService, ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
