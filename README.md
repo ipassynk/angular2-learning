@@ -1,4 +1,4 @@
-# Angular 2 Learning uing betta. 
+# Angular 2 Learning using betta. 
 
 I am learning angular 2 now (forms, observable, rx)
 
