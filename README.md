@@ -1,6 +1,6 @@
-# Angular 2 Learning
+# Angular 2 Learning uing betta. 
 
-I am learning angular 2 now
+I am learning angular 2 now (forms, observable, rx)
 
 ## Running
 
