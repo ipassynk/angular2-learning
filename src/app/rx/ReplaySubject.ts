@@ -1,10 +1,10 @@
-import {Rx} from 'rx'
+import {ReplaySubject} from 'rxjs'
 
-var subject =  new Rx.ReplaySubject(2);
+var subject =  new ReplaySubject(2);
 
-subject.onNext('a');
-subject.onNext('b');
-subject.onNext('c');
+subject.next('a');
+subject.next('b');
+subject.next('c');
 
 var subscription = subject.subscribe(
     function (x) {
@@ -20,4 +20,4 @@ var subscription = subject.subscribe(
 // => Next: b
 // => Next: c
 
-subject.onNext('d');
+subject.next('d');

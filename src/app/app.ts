@@ -1,12 +1,8 @@
 import heroService from "./services/heroService";
 import ItemService from "./services/itemService";
 
-import {
-    Component,
-    Attribute,
-    bootstrap,
-    provide
-} from 'angular2/angular2';
+import {Component,Attribute,provide} from 'angular2/core';
+import {bootstrap}    from 'angular2/platform/browser';
 
 import {
     RouteConfig,
@@ -19,8 +15,7 @@ import {
     LocationStrategy,
     HashLocationStrategy,
     Router
-}
-    from 'angular2/router';
+}from 'angular2/router';
 
 import Page1 from "./Page1";
 import Page2 from "./Page2";
@@ -34,7 +29,7 @@ import Page3 from "./Page3";
 @Component({
     selector: 'my-app',
     templateUrl: 'src/app/app.html',
-    directives: [ROUTER_DIRECTIVES, Page1, Page2]
+    directives: [ROUTER_DIRECTIVES, Page1, Page2, Page3]
 })
 class AppComponent {
     router: Router;

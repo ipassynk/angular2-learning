@@ -16,7 +16,6 @@ subject.subscribe(
 
 subject.next(56);
 
-
 subject.subscribe(
     function (x) {
         console.log('Next2: ' + x.toString());
@@ -28,6 +27,5 @@ subject.subscribe(
         console.log('Completed2');
     }
 );
-
 
 subject.next(57);

@@ -1,24 +1,29 @@
-import {Component, FORM_DIRECTIVES, ControlGroup, Control} from "angular2/angular2";
+import {Component} from "angular2/core";
+import {FORM_PROVIDERS, FormBuilder}    from 'angular2/common';
 
 @Component({
     selector: 'control-form',
     template: `
-       <form [ng-form-model]="form">
-           <label>Rate <input type="checkbox" ng-control="rate"></label>
-           <label>Location <input type="checkbox" ng-control="location"></label>
-           <label>Address <input type="text" ng-control="location"></label>
+       <form [ngFormModel]="myForm">
+           <label>Rate <input type="checkbox" ngControl="rate" #rate="ngForm"></label>
+           <label>Location <input type="checkbox" ngControl="location" #location="ngForm"></label>
+           <label>Address <input type="text" ngControl="address" #address="ngForm"></label>
        </form>
     `
 })
 export default class ControlFormComponent {
-    form = new ControlGroup({
-        rate: new Control(),
-        location: new Control(),
-        address: new Control()
-    });
+   private myForm: any;
 
-    get selectedField() {
-        return Object.keys(this.form.controls)
-            .filter((key)=>this.form.controls[key].value);
+    constructor(private fb: FormBuilder) {
+        this.myForm = this.fb.group({
+            'rate': '',
+            'location': '',
+            'address': ''
+        });
     }
+
+/*    get selectedField() {
+        return Object.keys(this.myForm.controls)
+            .filter((key)=>this.myForm.controls[key].value);
+    }*/
 }

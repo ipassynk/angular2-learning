@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, CORE_DIRECTIVES} from "angular2/angular2";
+import {Component, EventEmitter, Input, Output} from "angular2/core";
 
 @Component({
     selector: "item-list",
@@ -6,15 +6,14 @@ import {Component, EventEmitter, Input, Output, CORE_DIRECTIVES} from "angular2/
         <div style="border:2px solid blue;">
             <h3>{{ title }} </h3>
             <ul>
-                <li *ng-for="#p of items">
+                <li *ngFor="#p of items">
                     <label><input type="checkbox" (click)="update($event, p)" [checked]="state==='y'"/>{{ p }}</label>
                 </li>
             </ul>
         </div>
     `,
     inputs: ['title', 'items', 'state'],
-    outputs: ['switchStatus: statusChange'],
-    directives: [CORE_DIRECTIVES]
+    outputs: ['switchStatus: statusChange']
 })
 export default class ItemList {
     @Input() title;

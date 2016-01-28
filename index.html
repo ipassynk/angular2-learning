@@ -4,19 +4,32 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="src/style.css" />
-    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <!--<script src="https://code.angularjs.org/tools/system.js"></script>-->
 
-    <script src="https://code.angularjs.org/2.0.0-alpha.47/angular2.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-alpha.47/router.dev.js"></script>
-    <!--<script src="node_modules/rxjs/Rx.js"></script>-->
+    <!--<script src="https://code.angularjs.org/2.0.0-alpha.47/angular2.dev.js"></script>-->
+    <!--<script src="https://code.angularjs.org/2.0.0-alpha.47/router.dev.js"></script>-->
+    <!--<script src="https://code.angularjs.org/2.0.0-alpha.47/router.dev.js"></script>-->
+    <!--&lt;!&ndash;<script src="node_modules/rxjs/Rx.js"></script>&ndash;&gt;-->
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
     <script>
       System.config({
-        packages: {'src/app': {defaultExtension: 'js'}}
+        packages: {'src/app': {format: 'register', defaultExtension: 'js'}}
       });
       System.import('src/app/app');
     </script>
   </head>
   <body>
-    <my-app></my-app>
+    <my-app>Loading...</my-app>
   </body>
 </html>

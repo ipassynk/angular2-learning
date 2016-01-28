@@ -1,4 +1,4 @@
-import {Component, CORE_DIRECTIVES} from "angular2/angular2";
+import {Component} from "angular2/core";
 import Hero from "./../model/hero";
 import heroService from "./../services/heroService";
 

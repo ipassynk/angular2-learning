@@ -1,4 +1,4 @@
-import {Component} from "angular2/angular2";
+import {Component} from "angular2/core";
 
 import SearchBox from "./page3_components/SearchBox";
 import ItemList from "./page3_components/ItemList";

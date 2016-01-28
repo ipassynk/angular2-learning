@@ -1,4 +1,4 @@
-import {Component} from "angular2/angular2";
+import {Component} from "angular2/core";
 
 import HeroFormComponent from "./page2_components/hero-form";
 import ControlFormComponent from "./page2_components/control-form";
@@ -15,7 +15,7 @@ import Highlight from "./page2_components/Highlight";
         <control-form #formctrl></control-form>
 
         <ul class="list-group">
-            <li Highlight class="list-group-item" *ng-for="#p of formctrl.selectedField">
+            <li Highlight class="list-group-item" *ngFor="#p of formctrl.selectedField">
                 {{ p }}
             </li>
         </ul>

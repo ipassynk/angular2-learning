@@ -1,4 +1,4 @@
-import {Component, Input, CORE_DIRECTIVES} from "angular2/angular2";
+import {Component, Input} from "angular2/core";
 import Hero from "./../model/hero";
 
 @Component({
@@ -17,7 +17,7 @@ import Hero from "./../model/hero";
     }
     `],
     template: `
-        <div [ng-class]="getHeroClass()" class="hero">
+        <div [ngClass]="getHeroClass()" class="hero">
             {{ hero.name }} | {{ hero.power }}
         </div>
     `

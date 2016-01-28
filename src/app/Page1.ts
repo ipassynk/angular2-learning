@@ -1,8 +1,8 @@
-import {Component} from "angular2/angular2";
+import {Component} from "angular2/core";
 
 import LittleTour from './page1_components/littleHero';
-import FormObservable from './page1_components/formObservable';
-import RxTest from './page1_components/rxTest';
+import FormObservable from './rx_components/formObservable';
+import RxTest from './rx_components/rxTest';
 
 @Component({
     selector: "page1",
