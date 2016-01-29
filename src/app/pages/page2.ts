@@ -1,8 +1,8 @@
 import {Component} from "angular2/core";
 
-import HeroFormComponent from "./page2_components/hero_form.component";
-import ControlFormComponent from "./page2_components/control_form.component";
-import Highlight from "./page2_components/highlight.component";
+import HeroFormComponent from "../page2_components/hero_form.component";
+import ControlFormComponent from "../page2_components/control_form.component";
+import Highlight from "../page2_components/highlight.component";
 
 @Component({
     selector: "page2",

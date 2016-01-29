@@ -18,19 +18,21 @@ import {
     Router
 }from 'angular2/router';
 
-import Page1 from "./page1";
-import Page2 from "./page2";
-import Page3 from "./page3";
+import Page1 from "./pages/page1";
+import Page2 from "./pages/page2";
+import Page3 from "./pages/page3";
+import Page4 from "./pages/page4";
 
 @RouteConfig([
     {path: '/page1', component: Page1, as: 'Page1'},
     {path: '/page2', component: Page2, as: 'Page2'},
-    {path: '/page3', component: Page3, as: 'Page3'}
+    {path: '/page3', component: Page3, as: 'Page3'},
+    {path: '/page4', component: Page4, as: 'Page4'}
 ])
 @Component({
     selector: 'my-app',
     templateUrl: 'src/app/app.html',
-    directives: [ROUTER_DIRECTIVES, Page1, Page2, Page3]
+    directives: [ROUTER_DIRECTIVES, Page1, Page2, Page3, Page4]
 })
 class AppComponent {
     router: Router;
