@@ -1,8 +1,9 @@
-import heroService from "./services/heroService";
-import ItemService from "./services/itemService";
-
 import {Component,Attribute,provide} from 'angular2/core';
 import {bootstrap}    from 'angular2/platform/browser';
+
+import heroService from "./services/heroService";
+import ItemService from "./services/itemService";
+import SearchService from './services/SearchService';
 
 import {
     RouteConfig,
@@ -41,4 +42,5 @@ class AppComponent {
     }
 }
 
-bootstrap(AppComponent, [heroService, ItemService, ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})]);
+bootstrap(AppComponent, [heroService, ItemService, SearchService, ROUTER_PROVIDERS,
+    provide(LocationStrategy, {useClass: HashLocationStrategy})]);

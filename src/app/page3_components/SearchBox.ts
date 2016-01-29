@@ -1,17 +1,18 @@
 import {Component, EventEmitter, Output} from "angular2/core";
+import SearchService from '../services/SearchService';
 
 @Component({
     selector: "search-box",
     template:  `
         <input type="text" #filter>
         <button (click)="update(filter.value)">UpdateFilter</button>
-    `,
-    outputs:['updateFilter: filterChange']
+    `
 })
 export default class SearchBox {
-    private updateFilter:EventEmitter<any> = new EventEmitter<any>();
+    constructor(private searchService: SearchService) {
+    }
 
     update(value) {
-        this.updateFilter.emit(value);
+        this.searchService.filter.emit(value);
     }
 }
