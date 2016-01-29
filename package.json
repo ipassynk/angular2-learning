@@ -7,8 +7,8 @@
     "tsc": "tsc -p src -w",
     "start": "live-server --open=src"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [angular 2],
+  "author": "Julia Passynkova",
   "license": "ISC",
   "dependencies": {
     "angular2": "2.0.0-beta.1",
