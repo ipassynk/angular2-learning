@@ -3,7 +3,6 @@ import {Component} from "angular2/core";
 import LittleTour from './page1_components/littleHero';
 import FormObservable from './rx_components/formObservable';
 import RxTest from './rx_components/rxTest';
-import Websocket from './websocket/Websocket';
 
 @Component({
     selector: "page1",
@@ -15,7 +14,7 @@ import Websocket from './websocket/Websocket';
         <form-observable></form-observable>
         <little-tour></little-tour>
     `,
-    directives: [LittleTour, RxTest, FormObservable, Websocket]
+    directives: [LittleTour, RxTest, FormObservable]
 })
 export default class Page1 {
 
