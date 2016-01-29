@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from "angular2/core";
-import LetterPipe from "./letterPipe";
-import SearchService from '../services/SearchService';
+import LetterPipe from "./letter-pipe.component";
+import SearchService from '../services/search.service';
 
 @Component({
     selector: "item-list",

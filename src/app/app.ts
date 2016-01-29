@@ -1,9 +1,9 @@
 import {Component,Attribute,provide} from 'angular2/core';
 import {bootstrap}    from 'angular2/platform/browser';
 
-import heroService from "./services/heroService";
-import ItemService from "./services/itemService";
-import SearchService from './services/SearchService';
+import heroService from "./services/hero.service";
+import ItemService from "./services/item.service";
+import SearchService from './services/search.service';
 
 import {
     RouteConfig,
@@ -18,9 +18,9 @@ import {
     Router
 }from 'angular2/router';
 
-import Page1 from "./Page1";
-import Page2 from "./Page2";
-import Page3 from "./Page3";
+import Page1 from "./page1";
+import Page2 from "./page2";
+import Page3 from "./page3";
 
 @RouteConfig([
     {path: '/page1', component: Page1, as: 'Page1'},

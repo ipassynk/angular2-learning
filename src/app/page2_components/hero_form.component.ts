@@ -1,6 +1,6 @@
 import {Component} from "angular2/core";
 import Hero from "./../model/hero";
-import heroService from "./../services/heroService";
+import heroService from "./../services/hero.service";
 
 @Component({
     selector: 'hero-form',

@@ -1,8 +1,8 @@
 import {Component} from "angular2/core";
 
-import SearchBox from "./page3_components/SearchBox";
-import ItemList from "./page3_components/ItemList";
-import ItemService from "./services/itemService"
+import SearchBox from "./page3_components/search-box.component";
+import ItemList from "./page3_components/item-list.component";
+import ItemService from "./services/item.service"
 
 @Component({
     selector: "page3",

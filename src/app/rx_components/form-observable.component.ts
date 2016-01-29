@@ -8,7 +8,7 @@ import { Observable } from "rxjs/Rx";
 	    <h2>FormObservable</h2>
 		<form>
 			<input type="text" [ngFormControl]="name"/>
-			async val: {{x | async}}
+		async val: {{x | async}}
 		</form>
 	`,
 	changeDetection: ChangeDetectionStrategy.OnPushObserve,

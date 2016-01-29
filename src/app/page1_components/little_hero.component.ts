@@ -1,8 +1,8 @@
 import {Component} from "angular2/core";
 
-import heroService from "./../services/heroService";
+import heroService from "./../services/hero.service";
 import Hero from "./../model/hero";
-import heroRender from "./heroRender";
+import heroRender from "./hero_render.component";
 
 @Component({
     selector: 'little-tour',
