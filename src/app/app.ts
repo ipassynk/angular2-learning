@@ -24,10 +24,10 @@ import Page3 from "./pages/page3";
 import Page4 from "./pages/page4";
 
 @RouteConfig([
-    {path: '/page1', component: Page1, as: 'Page1'},
-    {path: '/page2', component: Page2, as: 'Page2'},
-    {path: '/page3', component: Page3, as: 'Page3'},
-    {path: '/page4', component: Page4, as: 'Page4'}
+    {path: '/page1', component: Page1, name: 'Page1'},
+    {path: '/page2', component: Page2, name: 'Page2', useAsDefault: true},
+    {path: '/page3', component: Page3, name: 'Page3'},
+    {path: '/page4', component: Page4, name: 'Page4'}
 ])
 @Component({
     selector: 'my-app',
