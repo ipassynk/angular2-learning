@@ -4,8 +4,8 @@ import {Component} from "angular2/core";
     selector: 'panel',
     template: `
         <div clas="well">
-            <h1>Hi Panel</h1>
-            <ng-content></ng-content>
+            <ng-content select="h3"></ng-content>
+            <ng-content select=".body" [name=Edit]></ng-content>
         </div>
     `
 })
