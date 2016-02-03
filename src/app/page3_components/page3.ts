@@ -8,8 +8,6 @@ import SearchService from './search.service';
 @Component({
     selector: "page3",
     template: `
-        <h1>Page 3</h1>
-
         <div style="border:2px solid red">
             <div class="well">
                 Search box value: {{ filter }}

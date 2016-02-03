@@ -5,7 +5,7 @@ import SearchService from './search.service';
     selector: "search-box",
     template:  `
         <input type="text" #filter>
-        <button (click)="update(filter.value)">UpdateFilter</button>
+        <button (click)="update(filter.value)" class="btn btn-primary btn-sm">UpdateFilter</button>
     `
 })
 export default class SearchBox {

@@ -11,7 +11,7 @@ interface Item{
     template: `
        <div>
          <h3>ClickObservable</h3>
-         <button (click)="clickStream.next($event)" name="button">Click Me</button>
+         <button (click)="clickStream.next($event)" name="button" class="btn btn-primary">Click Me</button>
          <ul>
            <li *ngFor="#item of items | async">{{item.id}}</li>
          </ul>

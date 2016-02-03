@@ -7,11 +7,9 @@ import Child from "./child.component";
     template: `
        <div>
          <h3>Parent</h3>
-         <button (click)="updateInput()" name="button">Update Inputs</button>
-          <div>Output {{ out }}</div>
-          <well>
-             <child [inp]="inp" (out)="updateOutput()"></child>
-         </well>
+         <button (click)="updateInput()" name="button" class="btn btn-primary">Update Inputs</button>
+         <div>Output {{ out }}</div>
+         <child [inp]="inp" (out)="updateOutput()"></child>
        </div>
   `,
     directives: [Child]
@@ -19,9 +17,11 @@ import Child from "./child.component";
 export default class Parent {
     inp:number = 0;
     out:number = 0;
+
     updateInput() {
         this.inp++;
     }
+
     updateOutput() {
         this.out++;
     }

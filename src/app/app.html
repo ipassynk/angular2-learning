@@ -1,13 +1,14 @@
-<div class="container" style="color:darkred;">
-
-    <a [routerLink]="['./ClickObservable']">ClickObservable</a>
-    <a [routerLink]="['./FormObservable']">FormObservable</a>
-    <a [routerLink]="['./Host']">Host</a>
-    <a [routerLink]="['./TickerList']">TickerList</a>
-    <a [routerLink]="['./Page1']">page1</a>
-    <a [routerLink]="['./Page2']">page2</a>
-    <a [routerLink]="['./Page3']">page3</a>
-    <a [routerLink]="['./Page4']">page4</a>
-    <hr>
+<div class="card-deck-wrapper">
+    <div class="card-deck">
+        <div class="card text-xs-center" *ngFor="#route of getRoutes()">
+            <h3 class="card-header">{{ route.name }}</h3>
+            <div class="card-block">
+                <p class="card-text">{{ getDescription(route.component) }}</p>
+                <a [routerLink]="[route.as]" class="btn btn-primary">Show</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron text-xs-center">
     <router-outlet></router-outlet>
 </div>

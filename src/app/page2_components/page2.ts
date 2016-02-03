@@ -7,7 +7,6 @@ import Highlight from "./highlight.component";
 @Component({
     selector: "page2",
     template:  `
-        <h1>Page 2</h1>
         <hero-form></hero-form>
 
         <hr [style.background]="'lime'" [style.height]="'10px'">
