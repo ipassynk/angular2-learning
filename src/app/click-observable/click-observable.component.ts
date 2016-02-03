@@ -6,11 +6,11 @@ interface Item{
 }
 
 @Component({
-    selector: 'rx-test',
+    selector: 'click-observable',
     changeDetection: ChangeDetectionStrategy.OnPushObserve,
     template: `
        <div>
-         <h3>RxTest</h3>
+         <h3>ClickObservable</h3>
          <button (click)="clickStream.next($event)" name="button">Click Me</button>
          <ul>
            <li *ngFor="#item of items | async">{{item.id}}</li>
@@ -18,7 +18,7 @@ interface Item{
        </div>
   `
 })
-export default class RxTest {
+export default class ClickObservable {
     public items:Observable<Array<Item>>;
     public clickStream = new Subject();
 
@@ -29,7 +29,7 @@ export default class RxTest {
             .combineLatest(mapClick$)
             .map(x=>[{id:x}])
             .do(x => console.log(x))
-            .scan((all, obj) => all.concat(obj), [])
+            .scan((all, obj) => all.concat(obj), []);
             //.do(x => console.log(x));
     }
 }

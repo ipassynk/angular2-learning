@@ -1,6 +1,6 @@
 import {Component} from "angular2/core";
 
-import Parent from '../child_parent_components/parent.component';
+import Parent from './parent.component';
 
 @Component({
     selector: "page4",

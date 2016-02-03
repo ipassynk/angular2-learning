@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Output} from "angular2/core";
-import SearchService from '../services/search.service';
+import SearchService from './search.service';
 
 @Component({
     selector: "search-box",

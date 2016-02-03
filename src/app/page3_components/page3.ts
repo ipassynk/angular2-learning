@@ -1,8 +1,9 @@
 import {Component} from "angular2/core";
 
-import SearchBox from "../page3_components/search-box.component";
-import ItemList from "../page3_components/item-list.component";
-import ItemService from "../services/item.service"
+import SearchBox from "./search-box.component";
+import ItemList from "./item-list.component";
+import ItemService from "./item.service"
+import SearchService from './search.service';
 
 @Component({
     selector: "page3",
@@ -20,6 +21,7 @@ import ItemService from "../services/item.service"
         </div>
     `
     ,directives: [SearchBox, ItemList]
+    ,viewProviders: [ItemService, SearchService]
 })
 export default class Page3 {
     public filter:string;
