@@ -1,6 +1,18 @@
 # Angular 2 Learning. 
 
-I am learning angular 2 now (forms, observable, rx, reflect, custom decorator)
+I am learning angular 2 now. The repo contains the folloiwng examples:
+- Reflection to build list of routes
+- Custom decorator of angular components
+- Simple templates 
+- Child/Parent Input/Output communication
+- Observable from button click combine with Observable.interval
+- Transclude
+- Shows pub/sub for sibling components
+- Use observable for bind to input and display data from the observable
+- Observable that emits ticks on in a service and two components subscribe to the observable and debounce ticks based provided configuration
+- Form binding
+- ...
+
 
 ## Running
 
