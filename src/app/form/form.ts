@@ -6,7 +6,6 @@ import Highlight from "./highlight.component";
 import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
 
 @ComponentDescriptionDecorator("Form...")
-
 @Component({
     selector: "just-form",
     template:  `

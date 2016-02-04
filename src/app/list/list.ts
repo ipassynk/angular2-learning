@@ -1,35 +1,26 @@
 import {Component} from "angular2/core";
 
-import SearchBox from "./search-box.component";
 import ItemList from "./item-list.component";
 import ItemService from "./item.service"
-import SearchService from './search.service';
+import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
 
+@ComponentDescriptionDecorator("Two lists moves data between each other. Shows input/output parameters interaction")
 @Component({
-    selector: "page3",
+    selector: "list",
     template: `
-        <div style="border:2px solid red">
-            <div class="well">
-                Search box value: {{ filter }}
-            </div>
-            <hr>
-            <search-box (filter-change)="onUpdate($event)"></search-box>
+        <div>
             <item-list title="Active status" [items]="activeItems" (status-change)="aStatus($event)" state="y"></item-list>
             <item-list title="Passive status" [items]="passiveItems" (status-change)="pStatus($event)" state="n"></item-list>
         </div>
     `
-    ,directives: [SearchBox, ItemList]
-    ,viewProviders: [ItemService, SearchService]
+    , directives: [ItemList]
+    , viewProviders: [ItemService]
 })
-export default class Page3 {
-    public filter:string;
+export default class List {
     public activeItems:Array<string> = this.itemService.activeItems;
     public passiveItems:Array<string> = this.itemService.passiveItems;
 
-    constructor(public itemService: ItemService) {}
-
-    onUpdate(value) {
-        this.filter = value;
+    constructor(public itemService:ItemService) {
     }
 
     pStatus(val) {
@@ -39,5 +30,4 @@ export default class Page3 {
     aStatus(val) {
         this.itemService.aStatus(val);
     }
-
 }

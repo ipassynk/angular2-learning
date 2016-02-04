@@ -4,33 +4,34 @@ import {RouteConfig,ROUTER_DIRECTIVES}from 'angular2/router';
 
 import Template from "./template/template";
 import Form from "./form/form";
-import Page3 from "./page3_components/page3";
+import List from "./list/list";
 import ChildParent from "./child_parent/child-parent.component";
 import TickObservable from "./tick-observable/ticker-list.component";
 import PanelHost from "./content/panel-host.component";
 import FormObservable from './form-observable/form-observable.component';
 import ClickObservable from "./click-observable/click-observable.component";
 import Event from "./event/event";
+import PipeHost from "./pipe/pipe-host.component";
 
 @RouteConfig([
-    {path: '/click-observable', component: ClickObservable,  as: 'ClickObservable'},
-    {path: '/form-observable', component: FormObservable,as: 'FormObservable'},
-    {path: '/panel-host', component: PanelHost, as: 'PanelHost'},
+    {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
+    {path: '/form-observable', component: FormObservable, as: 'FormObservable'},
+    {path: '/panel', component: PanelHost, as: 'PanelHost'},
     {path: '/tick-observable', component: TickObservable, as: 'TickObservable'},
     {path: '/template', component: Template, as: 'Template'},
     {path: '/form', component: Form, as: 'Form'},
-    {path: '/page3', component: Page3, as: 'Page3'},
+    {path: '/List', component: List, as: 'List'},
     {path: '/child-parent', component: ChildParent, as: 'ChildParent'},
-    {path: '/event', component: Event, as: 'Event'}
+    {path: '/event', component: Event, as: 'Event'},
+    {path: '/pipe', component: PipeHost, as: 'PipeHost'}
 ])
 @Component({
     selector: 'my-app',
     templateUrl: 'src/app/app.html',
-    directives: [ROUTER_DIRECTIVES, Template, Form, Page3,
-        ChildParent, TickObservable, PanelHost, FormObservable, ClickObservable, Event]
+    directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable, PanelHost, FormObservable, ClickObservable, Event, PipeHost]
 })
 export default class AppComponent {
-    getRoutes(): Array<Object> {
+    getRoutes():Array<Object> {
         return Reflect.getMetadata('annotations', this.constructor)
             .filter(a => {
                 return a.constructor.name === 'RouteConfig';
