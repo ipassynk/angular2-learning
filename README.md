@@ -1,6 +1,6 @@
 # Angular 2 Learning. 
 
-I am learning angular 2 now (forms, observable, rx)
+I am learning angular 2 now (forms, observable, rx, reflect, custom decorator)
 
 ## Running
 
