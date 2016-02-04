@@ -1,5 +1,4 @@
 import {Component} from "angular2/core";
-
 import Child from "./child.component";
 
 @Component({

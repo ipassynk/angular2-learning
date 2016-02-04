@@ -1,7 +1,9 @@
 import {Component, ChangeDetectionStrategy} from "angular2/core";
 import {NgForm, NgControl, FORM_DIRECTIVES, Control}  from 'angular2/common';
 import {Observable} from "rxjs/Rx";
+import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
 
+@ComponentDescriptionDecorator("Use observable for bind to input and display data from the observable")
 @Component({
     selector: 'form-observable',
     template: `

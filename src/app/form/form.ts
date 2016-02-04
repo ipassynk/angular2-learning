@@ -5,7 +5,7 @@ import ControlFormComponent from "./control_form.component";
 import Highlight from "./highlight.component";
 
 @Component({
-    selector: "page2",
+    selector: "just-form",
     template:  `
         <hero-form></hero-form>
 
