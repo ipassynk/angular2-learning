@@ -1,5 +1,7 @@
+import {Injectable} from "angular2/core";
 import Hero from "./../model/hero";
 
+@Injectable()
 export default class ItemService {
     public activeItems:Array<string> = ["bluberry", "banana"];
     public passiveItems:Array<string> = ["apple", "orange"];

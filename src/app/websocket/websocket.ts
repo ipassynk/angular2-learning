@@ -1,37 +1,39 @@
-/**
- * Created by passynko on 1/28/2016.
- */
 import {Component, ChangeDetectionStrategy} from "angular2/core";
-import { Observable, DOM, Observer } from "rxjs/Rx";
+import { Observable} from "rxjs/Rx";
+import {Subscriber} from "rxjs/Subscriber";
 
 @Component({
     selector: 'websocket',
-    template:`
+    template: `
         <div>
-            <h2>websocket</h2>
-            {{ socket | async }}
+            <h2>WebSocket</h2>
+            <input #name placeholder="Your name" />
+            <button (click)="sendMessage(name.value)">Send</button>
+            {{ observer | async }}
         </div>
     `,
-    changeDetection: ChangeDetectionStrategy.OnPushObserve,
+    changeDetection: ChangeDetectionStrategy.OnPushObserve
 })
-export default class Websocket {
-    socket:Observable<any>;
-    constructor() {
+export default class WebSocketTest {
+    observer:Subscriber<any>;
+    ws:WebSocket;
 
-        this.socket = DOM.fromWebSocket(
-            'ws://echo.websockets.org',
-            null, // no protocol
-            openObserver,
-            closingObserver);
+    ngOnInit() {
+        const BASE_URL = 'ws://echo.websocket.org';
+        this.ws = new WebSocket(BASE_URL);
 
-        var openObserver = Observer.create(function(e) {
-            console.info('socket open');
-            // Now it is safe to send a message
-            this.socket.next('test');
+        let observable = Observable.create(observer => {
+            console.log('aaa');
+            this.observer = observer;
+
+            this.ws.onmessage = (evt) => this.observer.next(evt.data);
+            this.ws.onerror = (evt) => console.error(`Error: ${evt}`);
+            this.ws.onclose = (evt) => console.log("WebSocket closed");
+            this.ws.onopen = (evt) => console.log("WebSocket opened");
         });
+    }
 
-        var closingObserver = Observer.create(function() {
-            console.log('socket is about to close');
-        });
+    sendMessage(name) {
+        this.ws.send(name);
     }
 }

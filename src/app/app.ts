@@ -12,6 +12,7 @@ import FormObservable from './form-observable/form-observable.component';
 import ClickObservable from "./click-observable/click-observable.component";
 import Event from "./event/event";
 import PipeHost from "./pipe/pipe-host.component";
+import WebSocket from "./websocket/websocket";
 
 @RouteConfig([
     {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -20,17 +21,18 @@ import PipeHost from "./pipe/pipe-host.component";
     {path: '/tick-observable', component: TickObservable, as: 'TickObservable'},
     {path: '/template', component: Template, as: 'Template'},
     {path: '/form', component: Form, as: 'Form'},
-    {path: '/List', component: List, as: 'List'},
+    {path: '/list', component: List, as: 'List'},
     {path: '/child-parent', component: ChildParent, as: 'ChildParent'},
     {path: '/event', component: Event, as: 'Event'},
-    {path: '/pipe', component: PipeHost, as: 'PipeHost'}
+    {path: '/pipe', component: PipeHost, as: 'PipeHost'},
+    {path: '/websocket', component: WebSocket, as: 'WebSocket'}
 ])
 @Component({
-    selector: 'my-app',
+    selector: 'app',
     templateUrl: 'src/app/app.html',
-    directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable, PanelHost, FormObservable, ClickObservable, Event, PipeHost]
+    directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable, PanelHost, FormObservable, ClickObservable, Event, PipeHost, WebSocket]
 })
-export default class AppComponent {
+export default class App {
     getRoutes():Array<Object> {
         return Reflect.getMetadata('annotations', this.constructor)
             .filter(a => {

@@ -1,18 +1,28 @@
-<div class="card-deck-wrapper">
-    <div class="card-deck">
-        <div class="row">
-        <div class="col-sm-3" *ngFor="#route of getRoutes()">
-        <div class="card text-xs-center" >
-            <h3 class="card-header">{{ route.name }}</h3>
-            <div class="card-block">
-                <p class="card-text">{{ getDescription(route.component) }}</p>
-                <a [routerLink]="[route.as]" class="btn btn-primary">Show</a>
+<header>
+
+</header>
+
+<main>
+    <div class="card-deck-wrapper">
+        <div class="card-deck">
+            <div class="row">
+            <div class="col-sm-3" *ngFor="#route of getRoutes()">
+            <div class="card text-xs-center" >
+                <h3 class="card-header">{{ route.name }}</h3>
+                <div class="card-block">
+                    <p class="card-text">{{ getDescription(route.component) }}</p>
+                    <a [routerLink]="[route.as]" class="btn btn-primary">Show</a>
+                </div>
             </div>
-        </div>
-        </div>
             </div>
+                </div>
+        </div>
     </div>
-</div>
-<div class="jumbotron" style="background-color: #EBF5EB">
-    <router-outlet></router-outlet>
-</div>
+    <div class="jumbotron" style="background-color: #EBF5EB">
+        <router-outlet></router-outlet>
+    </div>
+</main>
+
+<footer>
+    I am learning Angular 2 (Julia Passynkova)
+</footer>

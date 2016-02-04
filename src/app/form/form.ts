@@ -16,7 +16,7 @@ import ComponentDescriptionDecorator from "../decorator/conponent-description.de
         <control-form #formctrl></control-form>
 
         <ul class="list-group">
-            <li Highlight class="list-group-item" *ngFor="#p of formctrl.selectedField">
+            <li highlight class="list-group-item" *ngFor="#p of formctrl.selectedField">
                 {{ p }}
             </li>
         </ul>

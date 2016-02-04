@@ -1,7 +1,7 @@
-import {Directive, ElementRef, Renderer, Input} from 'angular2/core';
+import {Directive, ElementRef, Renderer} from 'angular2/core';
 
 @Directive({
-    selector: '[Highlight]'
+    selector: '[highlight]'
 })
 export default class Highlight {
     constructor(el: ElementRef, renderer: Renderer) {
