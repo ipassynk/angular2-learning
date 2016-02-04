@@ -1,10 +1,12 @@
 import {Component, OnInit, ChangeDetectionStrategy} from "angular2/core";
 import { Observable, Subject } from "rxjs/Rx";
+import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
 
 interface Item{
     id: number;
 }
 
+@ComponentDescriptionDecorator("Observable from button click combine with Observable.interval")
 @Component({
     selector: 'click-observable',
     changeDetection: ChangeDetectionStrategy.OnPushObserve,

@@ -7,7 +7,7 @@ import Panel from "./panel.component";
     selector: 'panel-host',
     template: `
       <panel>
-         <h3>I am header</h3>
+         <h4>I am header</h4>
          <div class="body">
             I am transcluded and interpolated {{ transcluded }} body!
             <br>
