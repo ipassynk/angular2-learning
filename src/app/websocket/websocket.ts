@@ -15,7 +15,7 @@ import ComponentDescriptionDecorator from "../decorator/conponent-description.de
                     <button (click)="sendMessage(phrase)" class="btn btn-primary">Send</button>
                  </div>
                  <div class="col-sm-4">
-                        Echo from websocket: {{ observer | async }}
+                        Echo from WebSocket: {{ observer | async }}
                  </div>
             </div>
         </div>
@@ -30,7 +30,7 @@ export default class WebSocketTest {
         const BASE_URL = 'ws://echo.websocket.org';
         this.ws = new WebSocket(BASE_URL);
 
-        this.ws.onmessage = (evt) => this.observer.next(evt.data);
+        this.ws.onmessage = (evt) => this.observer.emit(evt.data);
         this.ws.onerror = (evt) => console.error(`Error: ${evt}`);
         this.ws.onclose = (evt) => console.log("WebSocket closed");
         this.ws.onopen = (evt) => console.log("WebSocket opened");

@@ -2,7 +2,7 @@ import {Component} from "angular2/core";
 
 import HeroFormComponent from "./hero_form.component";
 import ControlFormComponent from "./control_form.component";
-import Highlight from "./highlight.component";
+import Highlight from "./highlight.directive.ts";
 import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
 
 @ComponentDescriptionDecorator("Form...")

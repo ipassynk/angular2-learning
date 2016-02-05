@@ -5,8 +5,8 @@ import "rxjs/operator/throttleTime";
 
 @Component({
     selector: 'ticker-display',
-    template:`
-        here is the tick {{ tick }}
+    template: `
+        Here is the tick {{ tick }}
     `
 })
 export default class TickerDisplay implements OnInit{
