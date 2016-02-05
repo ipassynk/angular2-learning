@@ -6,12 +6,14 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 - Simple templates 
 - Child/Parent Input/Output communication
 - Observable from button click combine with Observable.interval
-- Transclude
+- Aka Angular 1 Transclude
 - Shows pub/sub for sibling components
 - Use observable for bind to input and display data from the observable
 - Observable that emits ticks on in a service and two components subscribe to the observable and debounce ticks based provided configuration
 - Form binding
-- ...
+- Custom pipe
+- WebSocket with observable
+- List managemenet using Observable. Thanks to  http://victorsavkin.com/post/137821436516/managing-state-in-angular-2-applications
 
 
 ## Running
