@@ -12,7 +12,7 @@ import ComponentDescriptionDecorator from "../decorator/conponent-description.de
             <div class="row">
                 <div class="col-sm-4">
                     <input #phrase placeholder="Your phrase" />
-                    <button (click)="sendMessage(phrase.value)" class="btn btn-primary">Send</button>
+                    <button (click)="sendMessage(phrase)" class="btn btn-primary">Send</button>
                  </div>
                  <div class="col-sm-4">
                         Echo from websocket: {{ observer | async }}
@@ -36,7 +36,7 @@ export default class WebSocketTest {
         this.ws.onopen = (evt) => console.log("WebSocket opened");
     }
 
-    sendMessage(phrase) {
-        this.ws.send(phrase);
+    sendMessage({value}) {
+        this.ws.send(value);
     }
 }
