@@ -1,8 +1,8 @@
-import {Component, Input} from "angular2/core";
+import {Component, Input, Query, Attribute, Optional} from "angular2/core";
 import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
 import Panel from "./panel.component";
 
-@ComponentDescriptionDecorator("Transclude")
+@ComponentDescriptionDecorator("Aka Angular 1 Transclude")
 @Component({
     selector: 'panel-host',
     template: `
@@ -18,6 +18,6 @@ import Panel from "./panel.component";
     ,directives: [Panel]
 })
 export default class PanelHost {
-    @Input() name;
-    transcluded: string = 'xxxx';
+    transcluded: string = 'transcluded';
+    @Optional() @Attribute('name') name: string;
 }

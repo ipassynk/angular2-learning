@@ -1,39 +1,42 @@
-import {Component, ChangeDetectionStrategy} from "angular2/core";
+import {Component, ChangeDetectionStrategy, EventEmitter} from "angular2/core";
 import { Observable} from "rxjs/Rx";
 import {Subscriber} from "rxjs/Subscriber";
+import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
 
+@ComponentDescriptionDecorator("WebSocket for Angular2")
 @Component({
     selector: 'websocket',
     template: `
         <div>
             <h2>WebSocket</h2>
-            <input #name placeholder="Your name" />
-            <button (click)="sendMessage(name.value)">Send</button>
-            {{ observer | async }}
+            <div class="row">
+                <div class="col-sm-4">
+                    <input #phrase placeholder="Your phrase" />
+                    <button (click)="sendMessage(phrase.value)" class="btn btn-primary">Send</button>
+                 </div>
+                 <div class="col-sm-4">
+                        Echo from websocket: {{ observer | async }}
+                 </div>
+            </div>
         </div>
     `,
     changeDetection: ChangeDetectionStrategy.OnPushObserve
 })
 export default class WebSocketTest {
-    observer:Subscriber<any>;
+    observer:EventEmitter<any> = new EventEmitter<any>();
     ws:WebSocket;
 
     ngOnInit() {
         const BASE_URL = 'ws://echo.websocket.org';
         this.ws = new WebSocket(BASE_URL);
 
-        let observable = Observable.create(observer => {
-            console.log('aaa');
-            this.observer = observer;
-
-            this.ws.onmessage = (evt) => this.observer.next(evt.data);
-            this.ws.onerror = (evt) => console.error(`Error: ${evt}`);
-            this.ws.onclose = (evt) => console.log("WebSocket closed");
-            this.ws.onopen = (evt) => console.log("WebSocket opened");
-        });
+        this.ws.onmessage = (evt) => this.observer.next(evt.data);
+        this.ws.onerror = (evt) => console.error(`Error: ${evt}`);
+        this.ws.onclose = (evt) => console.log("WebSocket closed");
+        this.ws.onopen = (evt) => console.log("WebSocket opened");
     }
 
-    sendMessage(name) {
-        this.ws.send(name);
+    sendMessage(phrase) {
+        this.ws.send(phrase);
     }
 }
