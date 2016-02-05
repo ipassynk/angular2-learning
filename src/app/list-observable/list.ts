@@ -16,8 +16,8 @@ Thanks to
     selector: "observable-list",
     template: `
         <div>
-            <observable-item-list title="Active status" [items]="active" (toggle)="toggle($event)" state="y"></observable-item-list>
-            <observable-item-list title="Passive status" [items]="passive" (toggle)="toggle($event)" state="n"></observable-item-list>
+            <observable-item-list title="Checked status" [items]="check" (toggle)="toggle($event)" state="y"></observable-item-list>
+            <observable-item-list title="Unchecked status" [items]="uncheck" (toggle)="toggle($event)" state="n"></observable-item-list>
         </div>
     `
     , directives: [ObservableItemList]
@@ -27,11 +27,11 @@ Thanks to
 export default class ObservableList {
     constructor(private itemService:ObservableItemService) {
     }
-    get active() {
+    get check() {
         return this.itemService.store.map((x:Item[])=>x.filter(t => t.checked));
     }
 
-    get passive() {
+    get uncheck() {
         return this.itemService.store.map((x:Item[])=>x.filter(t => !t.checked));
     }
 
