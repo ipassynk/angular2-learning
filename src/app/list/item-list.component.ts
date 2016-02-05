@@ -12,16 +12,12 @@ import {Component, EventEmitter, Input, Output} from "angular2/core";
             </ul>
         </div>
     `
-    //inputs: ['title', 'items', 'state'],
-    //outputs: ['switchStatus: statusChange']
 })
 export default class ItemList {
     @Input() title;
     @Input() items;
     @Input() state;
     @Output('status-change') switchStatus = new EventEmitter();
-
-    //private switchStatus:EventEmitter<any> = new EventEmitter<any>();
 
     update(value, name) {
         this.switchStatus.emit({value: event.target.checked, name: name});
