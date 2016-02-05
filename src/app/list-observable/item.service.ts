@@ -1,5 +1,5 @@
 import {Injectable} from "angular2/core";
-import Hero from "./../model/hero";
+
 import {Subject} from "rxjs/Subject";
 import {BehaviorSubject} from "rxjs/Rx";
 import {Observable} from "rxjs/Observable";
@@ -17,13 +17,12 @@ export class ObservableItemService {
         new Item("apple", false),
         new Item("orange", false)
     ];
-    public store:BehaviorSubject<Array<Item>>;
-    public dispatcher:Subject<Item> = new Subject<Item>(null);
+    public  store:BehaviorSubject<Array<Item>> = new BehaviorSubject<Array<Item>>(this.initItems);
+    public  dispatcher:Subject<Item> = new Subject<Item>(null);
+    private reduce = new Subject<Item>(null);
 
     constructor() {
-        this.store = new BehaviorSubject<Array<Item>>(this.initItems);
-        let reduce = new Subject<Item>(null);
-        reduce
+        this.reduce
             .scan((items:Array<Item>, item)=> {
                 let i = items.findIndex((x:Item)=>x.name === item.name);
                 return [...items.slice(0, i),
@@ -33,6 +32,6 @@ export class ObservableItemService {
             }, this.initItems)
             .subscribe((s:Array<Item>) => this.store.next(s));
 
-        this.dispatcher.subscribe(x=>reduce.next(x));
+        this.dispatcher.subscribe(x=>this.reduce.next(x));
     }
 }
