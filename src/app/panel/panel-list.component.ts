@@ -14,10 +14,17 @@ import Panel from "./panel.component";
             and here it is my argument {{ name }}
          </div>
       </panel>
+
+      <panel>
+         <h4>I am another header</h4>
+         <div class="body">
+           Different body
+         </div>
+      </panel>
     `
     ,directives: [Panel]
 })
-export default class PanelHost {
+export default class PanelList {
     transcluded: string = 'transcluded';
     @Optional() @Attribute('name') name: string;
 }
