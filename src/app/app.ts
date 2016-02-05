@@ -13,6 +13,7 @@ import ClickObservable from "./click-observable/click-observable.component";
 import Event from "./event/event";
 import PipeHost from "./pipe/pipe-host.component";
 import WebSocket from "./websocket/websocket";
+import ObservableList from "./list-observable/list";
 
 @RouteConfig([
     {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -22,6 +23,7 @@ import WebSocket from "./websocket/websocket";
     {path: '/template', component: Template, as: 'Template'},
     {path: '/form', component: Form, as: 'Form'},
     {path: '/list', component: List, as: 'List'},
+    {path: '/observable-list', component: ObservableList, as: 'ObservableList'},
     {path: '/child-parent', component: ChildParent, as: 'ChildParent'},
     {path: '/event', component: Event, as: 'Event'},
     {path: '/pipe', component: PipeHost, as: 'PipeHost'},

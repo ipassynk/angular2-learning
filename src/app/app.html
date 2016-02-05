@@ -12,7 +12,7 @@
             <div class="card text-xs-center" >
                 <h3 class="card-header">{{ route.name }}</h3>
                 <div class="card-block">
-                    <p class="card-text">{{ getDescription(route.component) }}</p>
+                    <p class="card-text" [innerHTML]="getDescription(route.component)"></p>
                     <a [routerLink]="[route.as]" class="btn btn-primary">Show</a>
                 </div>
             </div>
