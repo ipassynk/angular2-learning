@@ -12,6 +12,7 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 - Observable that emits ticks on in a service and two components subscribe to the observable and debounce ticks based provided configuration
 - Form binding
 - Custom pipe
+- WebSocket with observable
 - List managemenet using Observable. Thanks to  http://victorsavkin.com/post/137821436516/managing-state-in-angular-2-applications
 
 
