@@ -32,7 +32,8 @@ import ObservableList from "./list-observable/list";
 @Component({
     selector: 'app',
     templateUrl: 'src/app/app.html',
-    directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable, PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket]
+    directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
+        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket]
 })
 export default class App {
     getRoutes():Array<Object> {

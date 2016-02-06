@@ -16,8 +16,8 @@ Thanks to
     selector: "observable-list",
     template: `
         <div>
-            <observable-item-list title="Checked status" [items]="check" (toggle)="toggle($event)" state="y"></observable-item-list>
-            <observable-item-list title="Unchecked status" [items]="uncheck" (toggle)="toggle($event)" state="n"></observable-item-list>
+            <observable-item-list title="Checked status" [items]="check" (toggle)="toggle($event)"></observable-item-list>
+            <observable-item-list title="Unchecked status" [items]="uncheck" (toggle)="toggle($event)"></observable-item-list>
         </div>
     `
     , directives: [ObservableItemList]
@@ -35,7 +35,7 @@ export default class ObservableList {
         return this.itemService.store.map((x:Item[])=>x.filter(t => !t.checked));
     }
 
-    toggle(item) {
-        this.itemService.dispatcher.next(item);
+    toggle($event) {
+        this.itemService.dispatcher.next($event);
     }
 }
