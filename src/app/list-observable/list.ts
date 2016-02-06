@@ -5,6 +5,7 @@ import {Observable} from "rxjs/Observable";
 import ObservableItemList from "./item-list.component";
 import {ObservableItemService, Item} from "./item.service"
 import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
+import {State} from "./item.service";
 
 const desc = `
 Two lists move data between each other. Built using Observable.
@@ -28,11 +29,11 @@ export default class ObservableList {
     constructor(private itemService:ObservableItemService) {
     }
     get check() {
-        return this.itemService.store.map((x:Item[])=>x.filter(t => t.checked));
+        return this.itemService.items$.map((x:Array<Item>)=>x.filter(t => t.checked));
     }
 
     get uncheck() {
-        return this.itemService.store.map((x:Item[])=>x.filter(t => !t.checked));
+        return this.itemService.items$.map((x:Array<Item>)=>x.filter(t => !t.checked));
     }
 
     toggle($event) {
