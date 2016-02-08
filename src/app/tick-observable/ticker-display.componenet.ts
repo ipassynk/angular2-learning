@@ -7,7 +7,7 @@ import {Subject} from "rxjs/Subject";
 @Component({
     selector: 'ticker-display',
     template: `
-        Here is the tick {{ tick }}. <button class="btn btn-primary" (click)="restart()">Restart</button>
+        Here is the tick {{ tick }}. <button class="btn btn-primary-outline" (click)="restart()">Restart</button>
     `
 })
 export default class TickerDisplay {

@@ -15,6 +15,7 @@ import PipeHost from "./pipe/pipe-host.component";
 import WebSocket from "./websocket/websocket";
 import ObservableList from "./list-observable/list";
 import {ChildRoute,ChildSummary} from "./child-route/child-route.component";
+import AsyncFilter from "./async-filter/async-filter.component";
 
 @RouteConfig([
    {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -29,7 +30,8 @@ import {ChildRoute,ChildSummary} from "./child-route/child-route.component";
     {path: '/event', component: Event, as: 'Event'},
     {path: '/pipe', component: PipeHost, as: 'PipeHost'},
     {path: '/websocket', component: WebSocket, as: 'WebSocket'},
-    {path: '/child-route/...', component: ChildRoute, as: "ChildRoute"}
+    {path: '/child-route/...', component: ChildRoute, as: "ChildRoute"},
+    {path: '/async-filter', component: AsyncFilter, as: "AsyncFilter"}
 ])
 @Component({
     selector: 'app',
