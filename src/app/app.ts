@@ -14,9 +14,10 @@ import Event from "./event/event";
 import PipeHost from "./pipe/pipe-host.component";
 import WebSocket from "./websocket/websocket";
 import ObservableList from "./list-observable/list";
+import NestedRoute from "./nested-route/nested-route.component";
 
 @RouteConfig([
-    {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
+   {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
     {path: '/form-observable', component: FormObservable, as: 'FormObservable'},
     {path: '/panel-list', component: PanelList, as: 'PanelList'},
     {path: '/tick-observable', component: TickObservable, as: 'TickObservable'},
@@ -28,6 +29,7 @@ import ObservableList from "./list-observable/list";
     {path: '/event', component: Event, as: 'Event'},
     {path: '/pipe', component: PipeHost, as: 'PipeHost'},
     {path: '/websocket', component: WebSocket, as: 'WebSocket'}
+   // {path: '/nested-route/...', component: NestedRoute, as: "NestedRoute", data:"'./NestedRoute','Summary'"}
 ])
 @Component({
     selector: 'app',
