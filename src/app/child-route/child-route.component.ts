@@ -12,7 +12,6 @@ export class ChildDetail {}
 @Component({
     selector: 'nested-route-summary',
     template: "<h3>Child Summary view</h3> <a [routerLink]=\"['../ChildDetail', {id: 1}]\">Got to child details 1</a>",
-    //template:'ChildSummary',
     directives: [ ROUTER_DIRECTIVES ]
 })
 export class ChildSummary {}

@@ -21,13 +21,13 @@ export class ObservableItemService {
         new Item("apple", false),
         new Item("orange", false)
     ];
-    private  store:BehaviorSubject<State> = new BehaviorSubject<State>({items:this.initItems});
-    public  dispatcher:Subject<Item> = new Subject<Item>(null);
-    private reduce = new Subject<Item>(null);
-    public items$ = this.store.map((s:State) => s.items);
+    private  store$:BehaviorSubject<State> = new BehaviorSubject<State>({items:this.initItems});
+    public  dispatcher$:Subject<Item> = new Subject<Item>(null);
+    private reduce$ = new Subject<Item>(null);
+    public items$ = this.store$.map((s:State) => s.items);
 
     constructor() {
-        this.reduce
+        this.reduce$
             .scan((state:State, {name, checked})=> {
                 let i = state.items.findIndex((x:Item)=>x.name === name);
                 return {items: [...state.items.slice(0, i),
@@ -35,8 +35,8 @@ export class ObservableItemService {
                     ...state.items.slice(i + 1)
                 ]};
             }, {items:this.initItems})
-            .subscribe((s:State) => this.store.next(s));
+            .subscribe((s:State) => this.store$.next(s));
 
-        this.dispatcher.subscribe(x=>this.reduce.next(x));
+        this.dispatcher$.subscribe(x=>this.reduce$.next(x));
     }
 }
