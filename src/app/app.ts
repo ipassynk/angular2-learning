@@ -16,9 +16,10 @@ import WebSocket from "./websocket/websocket";
 import ObservableList from "./list-observable/list";
 import {ChildRoute,ChildSummary} from "./child-route/child-route.component";
 import AsyncFilter from "./async-filter/async-filter.component";
+import ButtonControl from "./button-control/button-control.component";
 
 @RouteConfig([
-   {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
+    {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
     {path: '/form-observable', component: FormObservable, as: 'FormObservable'},
     {path: '/panel-list', component: PanelList, as: 'PanelList'},
     {path: '/tick-observable', component: TickObservable, as: 'TickObservable'},
@@ -31,13 +32,14 @@ import AsyncFilter from "./async-filter/async-filter.component";
     {path: '/pipe', component: PipeHost, as: 'PipeHost'},
     {path: '/websocket', component: WebSocket, as: 'WebSocket'},
     {path: '/child-route/...', component: ChildRoute, as: "ChildRoute"},
-    {path: '/async-filter', component: AsyncFilter, as: "AsyncFilter"}
+    {path: '/async-filter', component: AsyncFilter, as: "AsyncFilter"},
+    {path: '/button-control', component: ButtonControl, as: "ButtonControl"}
 ])
 @Component({
     selector: 'app',
     templateUrl: 'src/app/app.html',
     directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
-        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket,ChildRoute]
+        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket, ChildRoute, ButtonControl]
 })
 export default class App {
     getRoutes():Array<Object> {
