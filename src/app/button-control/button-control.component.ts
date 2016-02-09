@@ -9,9 +9,11 @@ import {Subject} from "rxjs/Subject";
     selector: "async-filter",
     template: `
         <p>Button is disabled while email and password less than 5 chars</p>
-        <label>Email<input [ngFormControl]="email"></label>
-        <label>Password<input [ngFormControl]="password"></label>
+        <label>Email<input [ngFormControl]="email" placeholder="mute be at least 5 chars"></label>
+        <label>Password<input [ngFormControl]="password" placeholder="mute be at least 5 chars"></label>
         <button [disabled]="btnState$ | async">Register</button> Button disabled: {{ btnState$ |async }}
+        <br>
+        Aggregated button states:{{ btnStates$ | async}}
     `,
     directives: [FORM_DIRECTIVES],
     changeDetection: ChangeDetectionStrategy.OnPush
@@ -20,6 +22,7 @@ export default class ButtonControl {
     public email:Control;
     public password:Control;
     public btnState$:Observable<boolean>;
+    private btnStates$:Observable<any>;
 
     constructor() {
         this.email = new Control();
@@ -31,5 +34,9 @@ export default class ButtonControl {
             })
             .debounceTime(1000)
             .startWith(true);
+
+        this.btnStates$ = this.btnState$.distinctUntilChanged()
+            .scan((states, state) =>
+                [states, state ? "disabled" : "enabled"].join(" | "), "");
     }
 }
