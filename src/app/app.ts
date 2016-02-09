@@ -17,6 +17,7 @@ import ObservableList from "./list-observable/list";
 import {ChildRoute,ChildSummary} from "./child-route/child-route.component";
 import AsyncFilter from "./async-filter/async-filter.component";
 import ButtonControl from "./button-control/button-control.component";
+import TimeoutCmp from "./timeout/timeout.component";
 
 @RouteConfig([
     {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -33,7 +34,8 @@ import ButtonControl from "./button-control/button-control.component";
     {path: '/websocket', component: WebSocket, as: 'WebSocket'},
     {path: '/child-route/...', component: ChildRoute, as: "ChildRoute"},
     {path: '/async-filter', component: AsyncFilter, as: "AsyncFilter"},
-    {path: '/button-control', component: ButtonControl, as: "ButtonControl"}
+    {path: '/button-control', component: ButtonControl, as: "ButtonControl"},
+    {path: '/timeout', component: TimeoutCmp, as: "TimeoutCmp"}
 ])
 @Component({
     selector: 'app',
