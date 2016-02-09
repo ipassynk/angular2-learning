@@ -13,14 +13,15 @@ export interface State {
     items:Array<Item>
 }
 
+const initItems:Array<Item> = [
+    new Item("blueberry", true),
+    new Item("banana", true),
+    new Item("apple", false),
+    new Item("orange", false)
+];
+
 @Injectable()
 export class ObservableItemService {
-    private initItems:Array<Item> = [
-        new Item("blueberry", true),
-        new Item("banana", true),
-        new Item("apple", false),
-        new Item("orange", false)
-    ];
     private  store:BehaviorSubject<State> = new BehaviorSubject<State>({items:this.initItems});
     public  dispatcher:Subject<Item> = new Subject<Item>(null);
     private reduce = new Subject<Item>(null);
@@ -34,7 +35,7 @@ export class ObservableItemService {
                     new Item(checked ? name.toUpperCase() : name.toLowerCase(), checked),
                     ...state.items.slice(i + 1)
                 ]};
-            }, {items:this.initItems})
+            }, {items:initItems})
             .subscribe((s:State) => this.store.next(s));
 
         this.dispatcher.subscribe(x=>this.reduce.next(x));
