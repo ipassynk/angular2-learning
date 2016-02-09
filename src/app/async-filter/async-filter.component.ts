@@ -27,7 +27,7 @@ class Fruit {
             </ul>
         </div>
     `,
-    changeDetection: ChangeDetectionStrategy.OnPushObserve,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     directives: [FORM_DIRECTIVES]
 })
 export default class AsyncFilter {
