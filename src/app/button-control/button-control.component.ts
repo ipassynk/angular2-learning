@@ -28,6 +28,8 @@ export default class ButtonControl {
         this.btnState$ = Observable.combineLatest(this.email.valueChanges, this.password.valueChanges,
             (email, password) => {
                 return !(email.length > 5 && password.length > 5);
-            }).startWith(true);
+            })
+            .debounceTime(1000)
+            .startWith(true);
     }
 }
