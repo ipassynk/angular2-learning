@@ -37,6 +37,6 @@ export default class ObservableList {
     }
 
     toggle($event) {
-        this.itemService.dispatcher.next($event);
+        this.itemService.dispatcher$.next($event);
     }
 }

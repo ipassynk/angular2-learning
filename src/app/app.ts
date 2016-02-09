@@ -14,7 +14,8 @@ import Event from "./event/event";
 import PipeHost from "./pipe/pipe-host.component";
 import WebSocket from "./websocket/websocket";
 import ObservableList from "./list-observable/list";
-import NestedRoute from "./nested-route/nested-route.component";
+import {ChildRoute,ChildSummary} from "./child-route/child-route.component";
+import AsyncFilter from "./async-filter/async-filter.component";
 
 @RouteConfig([
    {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -28,14 +29,15 @@ import NestedRoute from "./nested-route/nested-route.component";
     {path: '/child-parent', component: ChildParent, as: 'ChildParent'},
     {path: '/event', component: Event, as: 'Event'},
     {path: '/pipe', component: PipeHost, as: 'PipeHost'},
-    {path: '/websocket', component: WebSocket, as: 'WebSocket'}
-   // {path: '/nested-route/...', component: NestedRoute, as: "NestedRoute", data:"'./NestedRoute','Summary'"}
+    {path: '/websocket', component: WebSocket, as: 'WebSocket'},
+    {path: '/child-route/...', component: ChildRoute, as: "ChildRoute"},
+    {path: '/async-filter', component: AsyncFilter, as: "AsyncFilter"}
 ])
 @Component({
     selector: 'app',
     templateUrl: 'src/app/app.html',
     directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
-        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket]
+        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket,ChildRoute]
 })
 export default class App {
     getRoutes():Array<Object> {

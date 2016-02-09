@@ -14,7 +14,8 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 - Custom pipe
 - WebSocket with observable
 - List managemenet using Observable. Thanks to  http://victorsavkin.com/post/137821436516/managing-state-in-angular-2-applications
-
+- Async collection filter example. Use rxjs to filter valueChanges
+- Child/Parent nested routes
 
 ## Running
 
