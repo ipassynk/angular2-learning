@@ -22,7 +22,7 @@ const initItems:Array<Item> = [
 @Injectable()
 export class ObservableItemService {
 
-    private  store$:BehaviorSubject<State> = new BehaviorSubject<State>({items:this.initItems});
+    private  store$:BehaviorSubject<State> = new BehaviorSubject<State>({items:initItems});
     public  dispatcher$:Subject<Item> = new Subject<Item>(null);
     private reduce$ = new Subject<Item>(null);
 
