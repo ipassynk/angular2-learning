@@ -3,19 +3,24 @@
 I am learning angular 2 now. The repo contains the folloiwng examples:
 - Reflection to build list of routes
 - Custom decorator of angular components
-- Simple templates 
-- Child/Parent Input/Output communication
 - Observable from button click combine with Observable.interval
-- Aka Angular 1 Transclude
-- Shows pub/sub for sibling components
 - Use observable for bind to input and display data from the observable
+- Aka Angular 1 Transclude
 - Observable that emits ticks on in a service and two components subscribe to the observable and debounce ticks based provided configuration
-- Form binding
-- Custom pipe
-- WebSocket with observable
+- Simple Templates
+- Form
+- Two lists moves data between each other. Shows input/output parameters interaction
 - List managemenet using Observable. Thanks to  http://victorsavkin.com/post/137821436516/managing-state-in-angular-2-applications
-- Async collection filter example. Use rxjs to filter valueChanges
+- Child/Parent Input/Output communication
+- Shows pub/sub for sibling components
+- Pipe examples
+- WebSocket with Observable
 - Child/Parent nested routes
+- Async collection filter example. Use rxjs to filter valueChanges
+- Button state is controlled using combination of observables
+- Timer with expiration
+- Try http with all rxjs stuff like catch, retry, join several observable
+- Immutable data example with ChangeDetectionStrategy.OnPush
 
 ## Running
 
