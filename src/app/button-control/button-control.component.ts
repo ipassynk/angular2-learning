@@ -13,7 +13,10 @@ import {Subject} from "rxjs/Subject";
         <label>Password<input [ngFormControl]="password" placeholder="Must be at least 5 chars"></label>
         <button [disabled]="btnState$ | async">Register</button> Button disabled: {{ btnState$ |async }}
         <br>
-        Aggregated button states:{{ btnStates$ | async}}
+        Aggregated button states:
+            <ul *ngFor="#state of btnStates$ | async">
+                <li>{{ state.timestamp }} - {{state.value ? "Disabled" : "Enabled"}}</li>
+            </ul>
     `,
     directives: [FORM_DIRECTIVES],
     changeDetection: ChangeDetectionStrategy.OnPush
@@ -32,11 +35,13 @@ export default class ButtonControl {
             (email, password) => {
                 return !(email.length > 5 && password.length > 5);
             })
-            .throttleTime(1000)
-            .startWith(true);
+            .startWith(true)
+            .distinctUntilChanged();
 
-        this.btnStates$ = this.btnState$.distinctUntilChanged()
-            .scan((states, state) =>
-                [states, state ? "disabled" : "enabled"].join(" | "), "");
+        this.btnStates$ = this.btnState$
+            .map(x=> {
+                return {value: x, timestamp: new Date()}
+            })
+            .scan((states, state) => [...states, state], []);
     }
 }
