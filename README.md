@@ -1,4 +1,4 @@
-# Angular 2 Learning. 
+# I am learning Angular 2 and RxJS
 
 I am learning angular 2 now. The repo contains the folloiwng examples:
 - Reflection to build list of routes
