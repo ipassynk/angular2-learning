@@ -8,7 +8,7 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
   selector: 'websocket',
   template: `
         <div>
-            <h2>WebSocket</h2>
+            <h3>WebSocket</h3>
             <div class="row">
                 <div class="col-sm-4">
                     <input #phrase placeholder="Your phrase" />

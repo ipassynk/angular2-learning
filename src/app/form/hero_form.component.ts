@@ -9,7 +9,7 @@ import heroService from './../services/hero.service';
 export default class HeroFormComponent {
     public powers: string[] = ['Smart', 'Flexible', 'Hot', 'Strong'];
     public model: Hero = new Hero(18, 'Julia', this.powers[1], 'Meee');
-    public submitted: Boolean = false;
+    public submitted: boolean = false;
 
     constructor(public heroService: heroService) {}
 

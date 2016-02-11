@@ -10,11 +10,8 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
   selector: 'just-form',
   template: `
         <hero-form></hero-form>
-
         <hr [style.background]="'lime'" [style.height]="'10px'">
-
         <control-form #formctrl></control-form>
-
         <ul class="list-group">
             <li highlight class="list-group-item" *ngFor="#p of formctrl.selectedField">{{ p }}</li>
         </ul>

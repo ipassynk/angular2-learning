@@ -15,15 +15,17 @@ const desc = 'Try http with all rxjs stuff like catch, retry, join several obser
 @Component({
   selector: 'http-rxjs',
   template: `
-        <div class="form-group">
-           <select #type class="form-control col-sm-5">
-              <option value="r0">Fork several different observables like $q.all</option>
-              <option value="r1">Retry immediately anyway</option>
-              <option value="r3">Retry immediately anyway and return cached value</option>
-              <option value="r2">Retry immediately and check error type</option>
-              <option value="r4">Retry with delay forever</option>
-              <option value="r5">Retry wrong url 3 times with different delay and call good url at the end</option>
-          </select>
+        <div class="form-inline">
+         <div class="form-group">
+             <select #type class="form-control">
+                <option value="r0">Fork several different observables like $q.all</option>
+                <option value="r1">Retry immediately anyway</option>
+                <option value="r3">Retry immediately anyway and return cached value</option>
+                <option value="r2">Retry immediately and check error type</option>
+                <option value="r4">Retry with delay forever</option>
+                <option value="r5">Retry wrong url 3 times with different delay and call good url at the end</option>
+            </select>
+          </div>
           <button (click)="clickStream.next(type.value)" class="btn btn-primary">Click to load http observable</button>
         </div>
         <div class="well" *ngIf="data">

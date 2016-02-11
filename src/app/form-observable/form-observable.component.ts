@@ -7,11 +7,10 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
 @Component({
     selector: 'form-observable',
     template: `
-	    <h2>FormObservable</h2>
-		<form>
-			<input type="text" [ngFormControl]="name"/> async val: {{x | async}}
-		</form>
-	`,
+      <form>
+        <input type="text" [ngFormControl]="name"/> async val: {{x | async}}
+      </form>
+    `,
     changeDetection: ChangeDetectionStrategy.OnPushObserve,
     directives: [FORM_DIRECTIVES]
 })

@@ -43,6 +43,24 @@ import ImmutableRoute from './immutable/immutable-route.componet';
 ])
 @Component({
     selector: 'app',
+    styles: [`
+      footer {
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 70px;
+        border-top: 1px solid #e5e5e5;
+        background-color: #f5f5f5;
+      }
+      input.ng-valid, select.ng-valid {
+        border-left: 5px solid #42A948; /* green */
+      }
+      input.ng-invalid {
+        border-left: 5px solid #a94442; /* red */
+      }
+      .jumbotron {
+        background-color: #e3f2fd;
+      }
+    `],
     template: require('./app.html'),
     directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
         PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket,

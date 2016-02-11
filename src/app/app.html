@@ -1,14 +1,18 @@
 <header>
-    <nav class="navbar navbar-dark bg-inverse">
-        <a class="navbar-brand" href="#">I am learning Angular 2</a>
+    <nav class="navbar navbar-full navbar-dark bg-primary" role="navigation">
+        <a class="navbar-brand" href="http://github.com/ipassynk">Julia Passynkova GitHub</a>
     </nav>
 </header>
 
 <main style="margin-top:30px">
+    <div class="jumbotron">
+      <router-outlet></router-outlet>
+    </div>
+
     <div class="card-deck-wrapper">
         <div class="card-deck">
             <div class="row">
-            <div class="col-sm-3" *ngFor="#route of getRoutes()">
+            <div class="col-sm-2" *ngFor="#route of getRoutes()">
             <div class="card text-xs-center" >
                 <h3 class="card-header">{{ route.name }}</h3>
                 <div class="card-block">
@@ -19,9 +23,6 @@
             </div>
                 </div>
         </div>
-    </div>
-    <div class="jumbotron" style="background-color: #EBF5EB">
-        <router-outlet></router-outlet>
     </div>
 </main>
 

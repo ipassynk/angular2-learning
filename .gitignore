@@ -1,6 +1,6 @@
-.idea
-src/app/**/*.js
-src/app/**/*.js.map
+# js and js.map
+src/**/*.js
+src/**/*.js.map
 
 # Logs
 logs
