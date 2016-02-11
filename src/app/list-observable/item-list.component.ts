@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from 'angular2/core';
-import {Item} from './item.service'
+import {Item} from './item.service';
 
 @Component({
     selector: 'observable-item-list',
