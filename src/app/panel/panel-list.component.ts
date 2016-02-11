@@ -4,8 +4,8 @@ import Panel from './panel.component';
 
 @ComponentDescriptionDecorator('Aka Angular 1 Transclude')
 @Component({
-    selector: 'panel-host',
-    template: `
+  selector: 'panel-host',
+  template: `
       <panel>
          <h4>I am header</h4>
          <div class="body">
@@ -22,9 +22,9 @@ import Panel from './panel.component';
          </div>
       </panel>
     `
-    , directives: [Panel]
+  , directives: [Panel]
 })
 export default class PanelList {
-    transcluded: string = 'transcluded';
-    @Optional() @Attribute('name') name: string;
+  transcluded:string = 'transcluded';
+  @Optional() @Attribute('name') name:string;
 }

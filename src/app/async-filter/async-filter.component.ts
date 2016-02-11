@@ -7,14 +7,17 @@ import {NgForm, NgControl, FORM_DIRECTIVES, Control}  from 'angular2/common';
 import {BehaviorSubject} from 'rxjs/Rx';
 
 class Fruit {
-    constructor(public name: string, public color: string) {
-    }
+  constructor(public name:string, public color:string) {
+  }
 }
+const initItems:Array<Fruit> = [new Fruit('apple', 'yellow'),
+  new Fruit('kiwi', 'green'),
+  new Fruit('banana', 'yellow')];
 
 @ComponentDescriptionDecorator('Async collection filter example. Use rxjs to filter valueChanges')
 @Component({
-    selector: 'async-filter',
-    template: `
+  selector: 'async-filter',
+  template: `
         <div>
             <select [ngFormControl]="color">
                 <option>red</option>
@@ -27,24 +30,21 @@ class Fruit {
             </ul>
         </div>
     `,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    directives: [FORM_DIRECTIVES]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  directives: [FORM_DIRECTIVES]
 })
 export default class AsyncFilter {
-    public color: Control;
-    private initItems: Array<Fruit> = [new Fruit('apple', 'yellow'),
-                                      new Fruit('kiwi', 'green'),
-                                      new Fruit('banana', 'yellow')];
-    private items: BehaviorSubject<Array<Fruit>> = new BehaviorSubject<Array<Fruit>>(null);
+  public color:Control;
+  private items:BehaviorSubject<Array<Fruit>> = new BehaviorSubject<Array<Fruit>>(null);
 
-    constructor() {
-        this.color = new Control();
+  constructor() {
+    this.color = new Control();
 
-        this.color.valueChanges
-            .startWith(this.color.value)
-            .map(c => {
-               return c ? this.initItems.filter((f: Fruit) => f.color === c) : this.initItems;
-            })
-            .subscribe(x => this.items.next(x));
-    }
+    this.color.valueChanges
+      .startWith(this.color.value)
+      .map(c => {
+        return c ? initItems.filter((f:Fruit) => f.color === c) : initItems;
+      })
+      .subscribe(x => this.items.next(x));
+  }
 }

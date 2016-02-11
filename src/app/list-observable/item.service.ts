@@ -11,7 +11,8 @@ export class Item {
 
 export interface State {
   items: Array<Item>;
-};
+}
+;
 
 const initItems:Array<Item> = [
   new Item('blueberry', true),

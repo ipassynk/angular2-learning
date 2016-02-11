@@ -7,15 +7,15 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
 
 @ComponentDescriptionDecorator('Shows pub/sub for sibling components')
 @Component({
-    selector: 'just-event',
-    template: `
+  selector: 'just-event',
+  template: `
         <div>
            <event-pub></event-pub>
            <event-sub></event-sub>
         </div>
     `
-    , directives: [EventPub, EventSub]
-    , viewProviders: [EventService]
+  , directives: [EventPub, EventSub]
+  , viewProviders: [EventService]
 })
 export default class Event {
 

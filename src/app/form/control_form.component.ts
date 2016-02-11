@@ -2,8 +2,8 @@ import {Component} from 'angular2/core';
 import {FORM_PROVIDERS, FormBuilder}    from 'angular2/common';
 
 @Component({
-    selector: 'control-form',
-    template: `
+  selector: 'control-form',
+  template: `
        <form [ngFormModel]='myForm'>
            <label>Rate <input type="checkbox" ngControl="rate" #rate="ngForm"></label>
            <label>Location <input type="checkbox" ngControl="location" #location="ngForm"></label>
@@ -12,18 +12,18 @@ import {FORM_PROVIDERS, FormBuilder}    from 'angular2/common';
     `
 })
 export default class ControlFormComponent {
-   private myForm: any;
+  private myForm:any;
 
-    constructor(private fb: FormBuilder) {
-        this.myForm = this.fb.group({
-            'rate': '',
-            'location': '',
-            'address': ''
-        });
-    }
+  constructor(private fb:FormBuilder) {
+    this.myForm = this.fb.group({
+      'rate': '',
+      'location': '',
+      'address': ''
+    });
+  }
 
-/*    get selectedField() {
-        return Object.keys(this.myForm.controls)
-            .filter((key)=>this.myForm.controls[key].value);
-    }*/
+  /*    get selectedField() {
+   return Object.keys(this.myForm.controls)
+   .filter((key)=>this.myForm.controls[key].value);
+   }*/
 }

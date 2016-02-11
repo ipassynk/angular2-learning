@@ -5,11 +5,11 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
 
 @ComponentDescriptionDecorator(`Child/Parent Input/Output communication`)
 @Component({
-    selector: 'child-parent',
-    template: `
+  selector: 'child-parent',
+  template: `
       <parent></parent>
     `,
-    directives: [Parent]
+  directives: [Parent]
 })
 export default class ChildParent {
 

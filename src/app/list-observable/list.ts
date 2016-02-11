@@ -14,29 +14,30 @@ Thanks to
 `;
 @ComponentDescriptionDecorator(desc)
 @Component({
-    selector: 'observable-list',
-    template: `
+  selector: 'observable-list',
+  template: `
         <div>
             <observable-item-list title="Checked status" [items]="check" (toggle)="toggle($event)"></observable-item-list>
             <observable-item-list title="Unchecked status" [items]="uncheck" (toggle)="toggle($event)"></observable-item-list>
         </div>
     `
-    , directives: [ObservableItemList]
-    , providers: [ObservableItemService]
-    , changeDetection: ChangeDetectionStrategy.OnPushObserve
+  , directives: [ObservableItemList]
+  , providers: [ObservableItemService]
+  , changeDetection: ChangeDetectionStrategy.OnPushObserve
 })
 export default class ObservableList {
-    constructor(private itemService: ObservableItemService) {
-    }
-    get check() {
-        return this.itemService.items$.map((x: Array<Item>) => x.filter(t => t.checked));
-    }
+  constructor(private itemService:ObservableItemService) {
+  }
 
-    get uncheck() {
-        return this.itemService.items$.map((x: Array<Item>) => x.filter(t => !t.checked));
-    }
+  get check() {
+    return this.itemService.items$.map((x:Array<Item>) => x.filter(t => t.checked));
+  }
 
-    toggle($event) {
-        this.itemService.dispatcher$.next($event);
-    }
+  get uncheck() {
+    return this.itemService.items$.map((x:Array<Item>) => x.filter(t => !t.checked));
+  }
+
+  toggle($event) {
+    this.itemService.dispatcher$.next($event);
+  }
 }

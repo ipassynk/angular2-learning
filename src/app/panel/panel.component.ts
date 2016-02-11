@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
 
 @Component({
-    selector: 'panel',
-    template: `
+  selector: 'panel',
+  template: `
         <div class="card card-success">
             <h4 class="card-header"><ng-content select="h4"></ng-content></h4>
             <div class="card-block">

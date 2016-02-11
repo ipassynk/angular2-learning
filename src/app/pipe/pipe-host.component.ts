@@ -4,8 +4,8 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
 
 @ComponentDescriptionDecorator('Pipe examples')
 @Component({
-    selector: 'pipe-host',
-    template: `
+  selector: 'pipe-host',
+  template: `
         <div>
             <h3>{{ currentDate | date | uppercase }}</h3>
             <ul>
@@ -13,9 +13,9 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
             </ul>
         </div>
     `,
-    pipes: [LetterPipe]
+  pipes: [LetterPipe]
 })
 export default class PipeHost {
-    currentDate = new Date();
-    items = ['apple', 'banana', 'cookie'];
+  currentDate = new Date();
+  items = ['apple', 'banana', 'cookie'];
 }

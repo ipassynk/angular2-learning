@@ -7,8 +7,8 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
 
 @ComponentDescriptionDecorator('Form...')
 @Component({
-    selector: 'just-form',
-    template:  `
+  selector: 'just-form',
+  template: `
         <hero-form></hero-form>
 
         <hr [style.background]="'lime'" [style.height]="'10px'">
@@ -19,7 +19,7 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
             <li highlight class="list-group-item" *ngFor="#p of formctrl.selectedField">{{ p }}</li>
         </ul>
     `,
-    directives: [Highlight, ControlFormComponent, HeroFormComponent]
+  directives: [Highlight, ControlFormComponent, HeroFormComponent]
 })
 export default class FormHost {
 

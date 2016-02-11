@@ -7,27 +7,27 @@ import {BehaviorSubject} from 'rxjs/Rx';
 
 @ComponentDescriptionDecorator('Timer with expiration')
 @Component({
-    selector: 'timeout',
-    template: `
+  selector: 'timeout',
+  template: `
         <div>Timer: {{ timeout$ | async }}</div>
         <div>Is done: {{ done$ | async }}</div>
     `,
-    changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class TimeoutCmp {
-    private timeout$: Observable<any>;
-    private done$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private timeout$:Observable<any>;
+  private done$:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-    constructor() {
-        this.timeout$ =
-            Observable.interval(1000)
-                .map(x => x + 1)
-                .takeUntil(Observable.timer(9000));
+  constructor() {
+    this.timeout$ =
+      Observable.interval(1000)
+        .map(x => x + 1)
+        .takeUntil(Observable.timer(9000));
 
-        this.timeout$.subscribe(() => {
-        }, () => {
-        }, () => {
-            this.done$.next(true);
-        });
-    }
+    this.timeout$.subscribe(() => {
+    }, () => {
+    }, () => {
+      this.done$.next(true);
+    });
+  }
 }
