@@ -1,16 +1,17 @@
-import {Component, ChangeDetectionStrategy} from "angular2/core";
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {Http}    from 'angular2/http';
-import {Observable} from "rxjs/Rx";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
-import {resolve} from "url";
-import {HTTP_PROVIDERS} from "angular2/http";
-import {Subject} from "rxjs/Subject";
+import {Observable} from 'rxjs/Rx';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import {resolve} from 'url';
+import {HTTP_PROVIDERS} from 'angular2/http';
+import {Subject} from 'rxjs/Subject';
 
 const cacheValue = {
     cache: 'my cached value'
 };
 
-@ComponentDescriptionDecorator("Try http with all rxjs stuff like catch, retry, join several observable")
+const desc = 'Try http with all rxjs stuff like catch, retry, join several observable';
+@ComponentDescriptionDecorator(desc)
 @Component({
     selector: 'http-rxjs',
     template: `
@@ -22,8 +23,8 @@ const cacheValue = {
     providers: [HTTP_PROVIDERS]
 })
 export default class HttpRxjs {
-    data:Object;
-    clickStream:Subject<any> = new Subject<any>();
+    data: Object;
+    clickStream: Subject<any> = new Subject<any>();
 
     constructor(private http:Http) {
 
@@ -36,7 +37,7 @@ export default class HttpRxjs {
                 }
             );
         const promise$ = Observable.fromPromise(new Promise((resolve, reject) => {
-            setTimeout(()=>resolve("resolve from promise"), 5000);
+            setTimeout(()=>resolve('resolve from promise'), 5000);
         }));
         const users$ = this.http.get('https://api.github.com/users').map(res => res.json());
         const users1$ = this.http.get('https://api.github.com/users/1').map(res => res.json());

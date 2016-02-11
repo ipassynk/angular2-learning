@@ -1,24 +1,27 @@
-import {Component} from "angular2/core";
+import {Component} from 'angular2/core';
 
-import ItemList from "./item-list.component";
-import ItemService from "./item.service"
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
+import ItemList from './item-list.component';
+import ItemService from './item.service'
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
-@ComponentDescriptionDecorator("Two lists moves data between each other. Shows input/output parameters interaction")
+const desc = 'Two lists moves data between each other. Shows input/output parameters interaction';
+@ComponentDescriptionDecorator(desc)
 @Component({
-    selector: "list",
+    selector: 'list',
     template: `
         <div>
-            <item-list title="Active status" [items]="activeItems" (status-change)="aStatus($event)" state="y"></item-list>
-            <item-list title="Passive status" [items]="passiveItems" (status-change)="pStatus($event)" state="n"></item-list>
+            <item-list title="Active status" [items]="activeItems"
+                (status-change)="aStatus($event)" state="y"></item-list>
+            <item-list title="Passive status" [items]="passiveItems"
+                (status-change)="pStatus($event)" state="n"></item-list>
         </div>
     `
     , directives: [ItemList]
     , viewProviders: [ItemService]
 })
 export default class List {
-    public activeItems:Array<string> = this.itemService.activeItems;
-    public passiveItems:Array<string> = this.itemService.passiveItems;
+    public activeItems: Array<string> = this.itemService.activeItems;
+    public passiveItems: Array<string> = this.itemService.passiveItems;
 
     constructor(public itemService:ItemService) {
     }

@@ -1,9 +1,9 @@
-import {Component, ChangeDetectionStrategy} from "angular2/core";
-import {Observable} from "rxjs/Rx";
-import {Subject} from "rxjs/Subject";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
+import {Observable} from 'rxjs/Rx';
+import {Subject} from 'rxjs/Subject';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
-@ComponentDescriptionDecorator("WebSocket with Observable")
+@ComponentDescriptionDecorator('WebSocket with Observable')
 @Component({
     selector: 'websocket',
     template: `
@@ -23,8 +23,8 @@ import ComponentDescriptionDecorator from "../decorator/conponent-description.de
     changeDetection: ChangeDetectionStrategy.OnPushObserve
 })
 export default class WebSocketTest {
-    observer:Subject<any> = new Subject<any>();
-    ws:WebSocket;
+    observer: Subject<any> = new Subject<any>();
+    ws: WebSocket;
 
     ngOnInit() {
         const BASE_URL = 'ws://echo.websocket.org';
@@ -32,8 +32,8 @@ export default class WebSocketTest {
 
         this.ws.onmessage = (evt) => this.observer.next(evt.data);
         this.ws.onerror = (evt) => console.error(`Error: ${evt}`);
-        this.ws.onclose = (evt) => console.log("WebSocket closed");
-        this.ws.onopen = (evt) => console.log("WebSocket opened");
+        this.ws.onclose = (evt) => console.log('WebSocket closed');
+        this.ws.onopen = (evt) => console.log('WebSocket opened');
     }
 
     sendMessage({value}) {

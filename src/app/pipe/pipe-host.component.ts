@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, Output} from "angular2/core";
-import LetterPipe from "./letter-pipe.component";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
+import {Component, EventEmitter, Input, Output} from 'angular2/core';
+import LetterPipe from './letter-pipe.component';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
-@ComponentDescriptionDecorator("Pipe examples")
+@ComponentDescriptionDecorator('Pipe examples')
 @Component({
-    selector: "pipe-host",
+    selector: 'pipe-host',
     template: `
         <div>
             <h3>{{ currentDate | date | uppercase }}</h3>
@@ -17,5 +17,5 @@ import ComponentDescriptionDecorator from "../decorator/conponent-description.de
 })
 export default class PipeHost {
     currentDate = new Date();
-    items = ["apple", "banana", "cookie"];
+    items = ['apple', 'banana', 'cookie'];
 }

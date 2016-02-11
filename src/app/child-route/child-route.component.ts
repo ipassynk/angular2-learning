@@ -1,6 +1,6 @@
 import {Component,Type} from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router'
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
 @Component({
     selector: 'nested-route-detail',

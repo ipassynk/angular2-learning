@@ -1,12 +1,12 @@
-import {Component, ChangeDetectionStrategy} from "angular2/core";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
-import {Observable} from "rxjs/Observable";
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import {Observable} from 'rxjs/Observable';
 import {NgForm, NgControl, FORM_DIRECTIVES, Control}  from 'angular2/common';
-import {Subject} from "rxjs/Subject";
+import {Subject} from 'rxjs/Subject';
 
-@ComponentDescriptionDecorator("Button state is controlled using combination of observables")
+@ComponentDescriptionDecorator('Button state is controlled using combination of observables')
 @Component({
-    selector: "async-filter",
+    selector: 'async-filter',
     template: `
         <p>Button is disabled while email and password less than 5 chars</p>
         <label>Email<input [ngFormControl]="email" placeholder="Must be at least 5 chars"></label>

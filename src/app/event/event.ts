@@ -1,13 +1,13 @@
-import {Component} from "angular2/core";
+import {Component} from 'angular2/core';
 
-import EventPub from "./event-pub.component";
-import EventSub from "./event-sub.component";
-import EventService from "./event.service";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
+import EventPub from './event-pub.component';
+import EventSub from './event-sub.component';
+import EventService from './event.service';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
-@ComponentDescriptionDecorator("Shows pub/sub for sibling components")
+@ComponentDescriptionDecorator('Shows pub/sub for sibling components')
 @Component({
-    selector: "just-event",
+    selector: 'just-event',
     template: `
         <div>
            <event-pub></event-pub>

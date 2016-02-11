@@ -1,13 +1,13 @@
-import {Component, ChangeDetectionStrategy} from "angular2/core";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
-import {Observable} from "rxjs/Observable";
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import {Observable} from 'rxjs/Observable';
 import {NgForm, NgControl, FORM_DIRECTIVES, Control}  from 'angular2/common';
-import {Subject} from "rxjs/Subject";
-import {BehaviorSubject} from "rxjs/Rx";
+import {Subject} from 'rxjs/Subject';
+import {BehaviorSubject} from 'rxjs/Rx';
 
-@ComponentDescriptionDecorator("Timer with expiration")
+@ComponentDescriptionDecorator('Timer with expiration')
 @Component({
-    selector: "timeout",
+    selector: 'timeout',
     template: `
         <div>Timer: {{ timeout$ | async }}</div>
         <div>Is done: {{ done$ | async }}</div>
@@ -15,8 +15,8 @@ import {BehaviorSubject} from "rxjs/Rx";
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class TimeoutCmp {
-    private timeout$:Observable<any>;
-    private done$:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+    private timeout$: Observable<any>;
+    private done$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
     constructor() {
         this.timeout$ =

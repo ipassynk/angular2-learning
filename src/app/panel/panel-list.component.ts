@@ -1,8 +1,8 @@
-import {Component, Input, Query, Attribute, Optional} from "angular2/core";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
-import Panel from "./panel.component";
+import {Component, Input, Query, Attribute, Optional} from 'angular2/core';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import Panel from './panel.component';
 
-@ComponentDescriptionDecorator("Aka Angular 1 Transclude")
+@ComponentDescriptionDecorator('Aka Angular 1 Transclude')
 @Component({
     selector: 'panel-host',
     template: `

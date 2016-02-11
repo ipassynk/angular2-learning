@@ -1,13 +1,13 @@
-import {Component} from "angular2/core";
+import {Component} from 'angular2/core';
 
-import HeroFormComponent from "./hero_form.component";
-import ControlFormComponent from "./control_form.component";
-import Highlight from "./highlight.directive";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
+import HeroFormComponent from './hero_form.component';
+import ControlFormComponent from './control_form.component';
+import Highlight from './highlight.directive';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
-@ComponentDescriptionDecorator("Form...")
+@ComponentDescriptionDecorator('Form...')
 @Component({
-    selector: "just-form",
+    selector: 'just-form',
     template:  `
         <hero-form></hero-form>
 

@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from "angular2/core";
+import {Component, Input, Output, EventEmitter} from 'angular2/core';
 
 @Component({
     selector: 'child',
@@ -13,7 +13,8 @@ import {Component, Input, Output, EventEmitter} from "angular2/core";
 export default class Child {
     @Input() inp;
     @Output() out = new EventEmitter();
-    i:number;
+    i: number;
+
     updateOutput() {
         this.out.emit(this.i++);
     }

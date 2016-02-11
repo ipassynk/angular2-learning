@@ -1,10 +1,10 @@
-import {Injectable} from "angular2/core";
-import Hero from "./../model/hero";
+import {Injectable} from 'angular2/core';
+import Hero from './../model/hero';
 
 @Injectable()
 export default class ItemService {
-    public activeItems:Array<string> = ["bluberry", "banana"];
-    public passiveItems:Array<string> = ["apple", "orange"];
+    public activeItems: Array<string> = ['bluberry', 'banana'];
+    public passiveItems: Array<string> = ['apple', 'orange'];
 
     pStatus(val) {
         this.passiveItems.splice(this.passiveItems.indexOf(val.name), 1);

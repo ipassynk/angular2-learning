@@ -1,8 +1,8 @@
-import {Component} from "angular2/core";
+import {Component} from 'angular2/core';
 
-import Ticker from "./ticker.service";
-import TickerDisplay from "./ticker-display.componenet";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator"
+import Ticker from './ticker.service';
+import TickerDisplay from './ticker-display.componenet';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
 const desc:string =
     `Observable that emits ticks on in a service and two components

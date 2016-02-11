@@ -1,5 +1,5 @@
-import {Component, Input} from "angular2/core";
-import Hero from "./../model/hero";
+import {Component, Input} from 'angular2/core';
+import Hero from './../model/hero';
 
 @Component({
     selector: 'hero-render',
@@ -26,6 +26,6 @@ export default class HeroRender {
     @Input()  hero:Hero;
 
     getHeroClass() {
-        return this.hero.name === 'Julia' ? "hero-red" : "hero-green";
+        return this.hero.name === 'Julia' ? 'hero-red' : 'hero-green';
     }
 }

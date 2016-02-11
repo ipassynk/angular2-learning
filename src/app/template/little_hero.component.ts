@@ -1,8 +1,8 @@
-import {Component} from "angular2/core";
+import {Component} from 'angular2/core';
 
-import heroService from "./../services/hero.service";
-import Hero from "./../model/hero";
-import heroRender from "./hero_render.component";
+import heroService from './../services/hero.service';
+import Hero from './../model/hero';
+import heroRender from './hero_render.component';
 
 @Component({
     selector: 'little-tour',
@@ -17,16 +17,16 @@ import heroRender from "./hero_render.component";
     directives: [heroRender]
 })
 export default class LittleTour {
-    public hidden:boolean = true;
+    public hidden: boolean = true;
 
-    constructor(public heroService:heroService) {
+    constructor(public heroService: heroService) {
     }
 
     addHero(newHero) {
         this.hidden = false;
 
         if (newHero.value) {
-            let hero = new Hero(1, newHero.value, "strong");
+            let hero = new Hero(1, newHero.value, 'strong');
             this.heroService.addHero(hero);
             newHero.value = null;
         }

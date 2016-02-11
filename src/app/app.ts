@@ -1,25 +1,25 @@
 /// <reference path="../../node_modules/reflect-metadata/reflect-metadata.d.ts"/>
-import {Component,Type} from 'angular2/core';
-import {RouteConfig,ROUTER_DIRECTIVES}from 'angular2/router';
+import {Component, Type} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES}from 'angular2/router';
 
-import Template from "./template/template";
-import Form from "./form/form";
-import List from "./list/list";
-import ChildParent from "./child_parent/child-parent.component";
-import TickObservable from "./tick-observable/ticker-list.component";
-import PanelList from "./panel/panel-list.component";
+import Template from './template/template';
+import Form from './form/form';
+import List from './list/list';
+import ChildParent from './child_parent/child-parent.component';
+import TickObservable from './tick-observable/ticker-list.component';
+import PanelList from './panel/panel-list.component';
 import FormObservable from './form-observable/form-observable.component';
-import ClickObservable from "./click-observable/click-observable.component";
-import Event from "./event/event";
-import PipeHost from "./pipe/pipe-host.component";
-import WebSocket from "./websocket/websocket";
-import ObservableList from "./list-observable/list";
-import {ChildRoute,ChildSummary} from "./child-route/child-route.component";
-import AsyncFilter from "./async-filter/async-filter.component";
-import ButtonControl from "./button-control/button-control.component";
-import TimeoutCmp from "./timeout/timeout.component";
-import HttpRxjs from "./http-rxjs/http-rxjs.component";
-import ImmutableRoute from "./immutable/immutable-route.componet";
+import ClickObservable from './click-observable/click-observable.component';
+import Event from './event/event';
+import PipeHost from './pipe/pipe-host.component';
+import WebSocket from './websocket/websocket';
+import ObservableList from './list-observable/list';
+import {ChildRoute, ChildSummary} from './child-route/child-route.component';
+import AsyncFilter from './async-filter/async-filter.component';
+import ButtonControl from './button-control/button-control.component';
+import TimeoutCmp from './timeout/timeout.component';
+import HttpRxjs from './http-rxjs/http-rxjs.component';
+import ImmutableRoute from './immutable/immutable-route.componet';
 
 @RouteConfig([
     {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -34,28 +34,29 @@ import ImmutableRoute from "./immutable/immutable-route.componet";
     {path: '/event', component: Event, as: 'Event'},
     {path: '/pipe', component: PipeHost, as: 'PipeHost'},
     {path: '/websocket', component: WebSocket, as: 'WebSocket'},
-    {path: '/child-route/...', component: ChildRoute, as: "ChildRoute"},
-    {path: '/async-filter', component: AsyncFilter, as: "AsyncFilter"},
-    {path: '/button-control', component: ButtonControl, as: "ButtonControl"},
-    {path: '/timeout', component: TimeoutCmp, as: "TimeoutCmp"},
-    {path: '/http-rxjs', component: HttpRxjs, as: "HttpRxjs"},
-    {path: '/immutable-route', component: ImmutableRoute, as: "ImmutableRoute"}
+    {path: '/child-route/...', component: ChildRoute, as: 'ChildRoute'},
+    {path: '/async-filter', component: AsyncFilter, as: 'AsyncFilter'},
+    {path: '/button-control', component: ButtonControl, as: 'ButtonControl'},
+    {path: '/timeout', component: TimeoutCmp, as: 'TimeoutCmp'},
+    {path: '/http-rxjs', component: HttpRxjs, as: 'HttpRxjs'},
+    {path: '/immutable-route', component: ImmutableRoute, as: 'ImmutableRoute'}
 ])
 @Component({
     selector: 'app',
     template: require('./app.html'),
     directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
-        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket, ChildRoute, ButtonControl, HttpRxjs, ImmutableRoute]
+        PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket,
+        ChildRoute, ButtonControl, HttpRxjs, ImmutableRoute]
 })
 export class App {
-    getRoutes():Array<Object> {
+    getRoutes(): Array<Object> {
         return Reflect.getMetadata('annotations', this.constructor)
             .filter(a => {
                 return a.constructor.name === 'RouteConfig';
             }).pop().configs;
     }
 
-    getDescription(cmp:Type) {
+    getDescription(cmp: Type) {
         return Reflect.getMetadata('ComponentDescriptionDecorator', cmp);
     }
 }

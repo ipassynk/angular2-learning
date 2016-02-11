@@ -1,8 +1,8 @@
-import {Injectable} from "angular2/core";
+import {Injectable} from 'angular2/core';
 
-import {Subject} from "rxjs/Subject";
-import {BehaviorSubject} from "rxjs/Rx";
-import {Observable} from "rxjs/Observable";
+import {Subject} from 'rxjs/Subject';
+import {BehaviorSubject} from 'rxjs/Rx';
+import {Observable} from 'rxjs/Observable';
 
 export class Item {
     constructor(public name:string, public checked:boolean) {
@@ -13,17 +13,17 @@ export interface State {
     items:Array<Item>
 }
 const initItems:Array<Item> = [
-    new Item("blueberry", true),
-    new Item("banana", true),
-    new Item("apple", false),
-    new Item("orange", false)
+    new Item('blueberry', true),
+    new Item('banana', true),
+    new Item('apple', false),
+    new Item('orange', false)
 ];
 
 @Injectable()
 export class ObservableItemService {
 
-    private  store$:BehaviorSubject<State> = new BehaviorSubject<State>({items:initItems});
-    public  dispatcher$:Subject<Item> = new Subject<Item>(null);
+    private  store$: BehaviorSubject<State> = new BehaviorSubject<State>({items:initItems});
+    public  dispatcher$: Subject<Item> = new Subject<Item>(null);
     private reduce$ = new Subject<Item>(null);
 
     public items$ = this.store$.map((s:State) => s.items);

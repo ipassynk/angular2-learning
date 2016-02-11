@@ -1,19 +1,19 @@
-import {Component, EventEmitter, Input, Output} from "angular2/core";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
-import {ChangeDetectionStrategy} from "angular2/core";
-import {Subject} from "rxjs/Subject";
-import {Observable} from "rxjs/Observable";
+import {Component, EventEmitter, Input, Output} from 'angular2/core';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import {ChangeDetectionStrategy} from 'angular2/core';
+import {Subject} from 'rxjs/Subject';
+import {Observable} from 'rxjs/Observable';
 import {NgForm, NgControl, FORM_DIRECTIVES, Control}  from 'angular2/common';
-import {BehaviorSubject} from "rxjs/Rx";
+import {BehaviorSubject} from 'rxjs/Rx';
 
 class Fruit {
     constructor(public name:string, public color:string) {
     }
 }
 
-@ComponentDescriptionDecorator("Async collection filter example. Use rxjs to filter valueChanges")
+@ComponentDescriptionDecorator('Async collection filter example. Use rxjs to filter valueChanges')
 @Component({
-    selector: "async-filter",
+    selector: 'async-filter',
     template: `
         <div>
             <select [ngFormControl]="color">
@@ -31,7 +31,9 @@ class Fruit {
     directives: [FORM_DIRECTIVES]
 })
 export default class AsyncFilter {
-    private initItems:Array<Fruit> = [new Fruit("apple", "yellow"), new Fruit("kiwi", "green"), new Fruit("banana", "yellow")];
+    private initItems:Array<Fruit> = [new Fruit('apple', 'yellow'),
+                                      new Fruit('kiwi', 'green'),
+                                      new Fruit('banana', 'yellow')];
     public color:Control;
     private items:BehaviorSubject<Array<Fruit>> = new BehaviorSubject<Array<Fruit>>(null);
 

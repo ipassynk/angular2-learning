@@ -1,5 +1,5 @@
-import {Component} from "angular2/core";
-import Child from "./child.component";
+import {Component} from 'angular2/core';
+import Child from './child.component';
 
 @Component({
     selector: 'parent',
@@ -14,8 +14,8 @@ import Child from "./child.component";
     directives: [Child]
 })
 export default class Parent {
-    inp:number = 0;
-    out:number = 0;
+    inp: number = 0;
+    out: number = 0;
 
     updateInput() {
         this.inp++;

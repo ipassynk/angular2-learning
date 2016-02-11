@@ -1,11 +1,11 @@
-import {Component, ChangeDetectionStrategy} from "angular2/core";
-import {Subject} from "rxjs/Subject";
-import {Observable} from "rxjs/Observable";
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
+import {Subject} from 'rxjs/Subject';
+import {Observable} from 'rxjs/Observable';
 
-import ObservableItemList from "./item-list.component";
-import {ObservableItemService, Item} from "./item.service"
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
-import {State} from "./item.service";
+import ObservableItemList from './item-list.component';
+import {ObservableItemService, Item} from './item.service'
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import {State} from './item.service';
 
 const desc = `
 Two lists move data between each other. Built using Observable.
@@ -26,7 +26,7 @@ Thanks to
     , changeDetection: ChangeDetectionStrategy.OnPushObserve
 })
 export default class ObservableList {
-    constructor(private itemService:ObservableItemService) {
+    constructor(private itemService: ObservableItemService) {
     }
     get check() {
         return this.itemService.items$.map((x:Array<Item>)=>x.filter(t => t.checked));

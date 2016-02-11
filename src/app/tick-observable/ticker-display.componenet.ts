@@ -1,8 +1,8 @@
-import {Component, Input} from "angular2/core";
-import Ticker from "./ticker.service";
-import {OnInit} from "angular2/core";
-import "rxjs/operator/throttleTime";
-import {Subject} from "rxjs/Subject";
+import {Component, Input} from 'angular2/core';
+import Ticker from './ticker.service';
+import {OnInit} from 'angular2/core';
+import 'rxjs/operator/throttleTime';
+import {Subject} from 'rxjs/Subject';
 
 @Component({
     selector: 'ticker-display',

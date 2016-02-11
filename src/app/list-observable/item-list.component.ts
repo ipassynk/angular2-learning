@@ -1,8 +1,8 @@
-import {Component, EventEmitter, Input, Output} from "angular2/core";
-import {Item} from "./item.service"
+import {Component, EventEmitter, Input, Output} from 'angular2/core';
+import {Item} from './item.service'
 
 @Component({
-    selector: "observable-item-list",
+    selector: 'observable-item-list',
     template: `
         <div style="border:1px solid black; margin:10px;padding:10px;">
             <h4>{{ title }}</h4>
