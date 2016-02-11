@@ -31,10 +31,10 @@ class Fruit {
     directives: [FORM_DIRECTIVES]
 })
 export default class AsyncFilter {
+    public color: Control;
     private initItems: Array<Fruit> = [new Fruit('apple', 'yellow'),
                                       new Fruit('kiwi', 'green'),
                                       new Fruit('banana', 'yellow')];
-    public color: Control;
     private items: BehaviorSubject<Array<Fruit>> = new BehaviorSubject<Array<Fruit>>(null);
 
     constructor() {

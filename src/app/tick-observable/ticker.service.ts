@@ -1,4 +1,4 @@
-import {Observable} from 'rxjs/Rx'
+import {Observable} from 'rxjs/Rx';
 
 export default class Ticker {
     tick: Observable<any>;
