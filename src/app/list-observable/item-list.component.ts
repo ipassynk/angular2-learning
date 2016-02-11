@@ -7,7 +7,7 @@ import {Item} from './item.service';
         <div style="border:1px solid black; margin:10px;padding:10px;">
             <h4>{{ title }}</h4>
             <ul>
-                <li *ngFor="#item of items| async">
+                <li *ngFor="#item of items | async">
                     <label><input type="checkbox" (click)="update($event, item)" [checked]="item.checked"/>{{ item.name }}</label>
                 </li>
             </ul>

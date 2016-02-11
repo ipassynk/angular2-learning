@@ -22,13 +22,15 @@ const initItems:Array<Item> = [
 
 @Injectable()
 export class ObservableItemService {
-  public items$ = this.store$.map((s:State) => s.items);
+  public items$;
   public  dispatcher$:Subject<Item> = new Subject<Item>(null);
 
   private  store$:BehaviorSubject<State> = new BehaviorSubject<State>({items: initItems});
   private reduce$ = new Subject<Item>(null);
 
   constructor() {
+    this.items$ = this.store$.map((s:State) => s.items);
+
     this.reduce$
       .scan((state:State, {name, checked})=> {
         let i = state.items.findIndex((x:Item) => x.name === name);
