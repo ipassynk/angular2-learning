@@ -7,7 +7,7 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
     template: `<h3>Child Detail view</h3> Details 1 <a [routerLink]="['/ChildRoute', 'ChildSummary']">back to Summary</a>`,
     directives: [ ROUTER_DIRECTIVES ]
 })
-export class ChildDetail {}
+export class ChildDetail { }
 
 @Component({
     selector: 'nested-route-summary',
