@@ -22,7 +22,7 @@ import Panel from './panel.component';
          </div>
       </panel>
     `
-    ,directives: [Panel]
+    , directives: [Panel]
 })
 export default class PanelList {
     transcluded: string = 'transcluded';

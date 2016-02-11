@@ -4,7 +4,7 @@ import Ticker from './ticker.service';
 import TickerDisplay from './ticker-display.componenet';
 import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
-const desc:string =
+const desc  =
     `Observable that emits ticks on in a service and two components
      subscribe to the observable and debounce ticks based provided configuration
     `;

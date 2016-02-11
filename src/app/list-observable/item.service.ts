@@ -39,9 +39,9 @@ export class ObservableItemService {
                         ...state.items.slice(i + 1)
                         ]
                 };
-            }, {items:initItems})
+            }, {items: initItems})
             .subscribe((s:State) => this.store$.next(s));
 
-        this.dispatcher$.subscribe(x=>this.reduce$.next(x));
+        this.dispatcher$.subscribe(x => this.reduce$.next(x));
     }
 }

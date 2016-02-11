@@ -21,12 +21,12 @@ export default class TimeoutCmp {
     constructor() {
         this.timeout$ =
             Observable.interval(1000)
-                .map(x=>x + 1)
+                .map(x => x + 1)
                 .takeUntil(Observable.timer(9000));
 
-        this.timeout$.subscribe(()=> {
-        }, ()=> {
-        }, ()=> {
+        this.timeout$.subscribe(() => {
+        }, () => {
+        }, () => {
             this.done$.next(true);
         });
     }

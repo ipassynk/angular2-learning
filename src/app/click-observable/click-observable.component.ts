@@ -21,15 +21,15 @@ interface Item{
   `
 })
 export default class ClickObservable {
-    public items:Observable<Array<Item>>;
+    public items: Observable<Array<Item>>;
     public clickStream = new Subject<any>();
 
-    ngOnInit():void {
-        let mapClick$ = this.clickStream.map(x=>x.target.name);
+    ngOnInit(): void {
+        let mapClick$ = this.clickStream.map(x => x.target.name);
         this.items = Observable.interval(1000)
             .take(10)
             .combineLatest(mapClick$)
-            .map(x=>[{id:x}])
+            .map(x => [{id: x}])
             .do(x => console.log(x))
             .scan((all, obj) => all.concat(obj), []);
             //.do(x => console.log(x));

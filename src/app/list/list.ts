@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 
 import ItemList from './item-list.component';
-import ItemService from './item.service'
+import ItemService from './item.service';
 import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
 
 const desc = 'Two lists moves data between each other. Shows input/output parameters interaction';
@@ -23,7 +23,7 @@ export default class List {
     public activeItems: Array<string> = this.itemService.activeItems;
     public passiveItems: Array<string> = this.itemService.passiveItems;
 
-    constructor(public itemService:ItemService) {
+    constructor(public itemService: ItemService) {
     }
 
     pStatus(val) {

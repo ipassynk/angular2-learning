@@ -7,7 +7,7 @@ import {NgForm, NgControl, FORM_DIRECTIVES, Control}  from 'angular2/common';
 import {BehaviorSubject} from 'rxjs/Rx';
 
 class Fruit {
-    constructor(public name:string, public color:string) {
+    constructor(public name: string, public color: string) {
     }
 }
 
@@ -31,20 +31,20 @@ class Fruit {
     directives: [FORM_DIRECTIVES]
 })
 export default class AsyncFilter {
-    private initItems:Array<Fruit> = [new Fruit('apple', 'yellow'),
+    private initItems: Array<Fruit> = [new Fruit('apple', 'yellow'),
                                       new Fruit('kiwi', 'green'),
                                       new Fruit('banana', 'yellow')];
-    public color:Control;
-    private items:BehaviorSubject<Array<Fruit>> = new BehaviorSubject<Array<Fruit>>(null);
+    public color: Control;
+    private items: BehaviorSubject<Array<Fruit>> = new BehaviorSubject<Array<Fruit>>(null);
 
     constructor() {
         this.color = new Control();
 
         this.color.valueChanges
             .startWith(this.color.value)
-            .map(c=> {
-               return c ? this.initItems.filter((f:Fruit)=>f.color === c) : this.initItems;
+            .map(c => {
+               return c ? this.initItems.filter((f: Fruit) => f.color === c) : this.initItems;
             })
-            .subscribe(x=>this.items.next(x));
+            .subscribe(x => this.items.next(x));
     }
 }

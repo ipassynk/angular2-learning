@@ -24,7 +24,7 @@ export default class ImmutableRoute {
         this.dataImmutable = {x: ''};
         this.dataMutable = {x: ''};
 
-        Observable.interval(1000).map(x=> {
+        Observable.interval(1000).map(x => {
             this.dataImmutable = {x};
             this.dataMutable.x = x;
         }).subscribe();

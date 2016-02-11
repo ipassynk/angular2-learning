@@ -1,8 +1,8 @@
-import {Component, EventEmitter, Output} from "angular2/core";
+import {Component, EventEmitter, Output} from 'angular2/core';
 import EventService from './event.service';
 
 @Component({
-    selector: "event-pub",
+    selector: 'event-pub',
     template:  `
         Publisher: <input type="text" #text>
         <button (click)="update(text.value)" class="btn btn-primary btn-sm">Publish</button>

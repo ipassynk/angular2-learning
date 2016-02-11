@@ -12,21 +12,21 @@ import {Subject} from 'rxjs/Subject';
 })
 export default class TickerDisplay {
     @Input() delay;
-    tick:any;
-    click$:Subject<number>;
+    tick: any;
+    click$: Subject<number>;
 
-    constructor(private ticker:Ticker) {
+    constructor(private ticker: Ticker) {
         this.click$ = new Subject<number>();
 
         this.click$
             .startWith(null)
-            .switchMap(()=> {
+            .switchMap(() => {
                 return this.ticker.tick
                     .throttleTime(this.delay)
-                    .take(10)
+                    .take(10);
             })
-            .do(x=>console.log(`delay:${this.delay} tick:${x}`))
-            .subscribe((x)=> this.tick = x);
+            .do(x => console.log(`delay:${this.delay} tick:${x}`))
+            .subscribe((x) => this.tick = x);
     }
 
     restart() {

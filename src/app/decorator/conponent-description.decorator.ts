@@ -9,5 +9,5 @@
 export default function ComponentDescriptionDecorator(value: string) {
     return function (target: Function) {
         Reflect.defineMetadata('ComponentDescriptionDecorator', value, target);
-    }
+    };
 }

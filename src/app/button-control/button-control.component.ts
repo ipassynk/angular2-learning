@@ -22,10 +22,10 @@ import {Subject} from 'rxjs/Subject';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ButtonControl {
-    public email:Control;
-    public password:Control;
-    public btnState$:Observable<boolean>;
-    private btnStates$:Observable<any>;
+    public email: Control;
+    public password: Control;
+    public btnState$: Observable<boolean>;
+    private btnStates$: Observable<any>;
 
     constructor() {
         this.email = new Control();
@@ -39,8 +39,8 @@ export default class ButtonControl {
             .distinctUntilChanged();
 
         this.btnStates$ = this.btnState$
-            .map(x=> {
-                return {value: x, timestamp: new Date()}
+            .map(x => {
+                return {value: x, timestamp: new Date()};
             })
             .scan((states, state) => [...states, state], []);
     }

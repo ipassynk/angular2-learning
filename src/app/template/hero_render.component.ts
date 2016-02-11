@@ -23,7 +23,7 @@ import Hero from './../model/hero';
     `
 })
 export default class HeroRender {
-    @Input()  hero:Hero;
+    @Input()  hero: Hero;
 
     getHeroClass() {
         return this.hero.name === 'Julia' ? 'hero-red' : 'hero-green';

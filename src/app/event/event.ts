@@ -14,8 +14,8 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
            <event-sub></event-sub>
         </div>
     `
-    ,directives: [EventPub, EventSub]
-    ,viewProviders: [EventService]
+    , directives: [EventPub, EventSub]
+    , viewProviders: [EventService]
 })
 export default class Event {
 

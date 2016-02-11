@@ -11,7 +11,7 @@ export default class HeroFormComponent {
     public model: Hero = new Hero(18, 'Julia', this.powers[1], 'Meee');
     public submitted: Boolean = false;
 
-    constructor(public heroService:heroService) {}
+    constructor(public heroService: heroService) {}
 
     onSubmit() {
         this.submitted = true;
