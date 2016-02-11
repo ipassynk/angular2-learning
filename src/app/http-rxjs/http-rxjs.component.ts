@@ -26,7 +26,7 @@ const desc = 'Try http with all rxjs stuff like catch, retry, join several obser
                 <option value="r5">Retry wrong url 3 times with different delay and call good url at the end</option>
             </select>
           </div>
-          <button (click)="clickStream.next(type.value)" class="btn btn-primary">Click to load http observable</button>
+          <button (click)="clickStream.next(type.value)" class="btn btn-primary-outline">Click to load http observable</button>
         </div>
         <div class="well" *ngIf="data">
              <div>{{ data  | json }}</div>

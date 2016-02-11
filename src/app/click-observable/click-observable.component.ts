@@ -13,7 +13,7 @@ interface Item {
   changeDetection: ChangeDetectionStrategy.OnPushObserve,
   template: `
        <div>
-         <button (click)="clickStream.next($event)" name="button" class="btn btn-primary">Click Me</button>
+         <button (click)="clickStream.next($event)" name="button" class="btn btn-primary-outline">Click Me</button>
          <ul>
            <li *ngFor="#item of items | async">{{item.id}}</li>
          </ul>

@@ -12,7 +12,7 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
             <div class="row">
                 <div class="col-sm-4">
                     <input #phrase placeholder="Your phrase" />
-                    <button (click)="sendMessage(phrase)" class="btn btn-primary">Send</button>
+                    <button (click)="sendMessage(phrase)" class="btn btn-primary-outline">Send</button>
                  </div>
                  <div class="col-sm-4">
                         Received echo from WebSocket: {{ observer | async }}

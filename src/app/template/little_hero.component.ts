@@ -9,7 +9,7 @@ import heroRender from './hero_render.component';
   template: `
         <div [hidden]="hidden" class="alert alert-success">New hero is added!</div>
         <input #newHero (keyup.enter)="addHero(newHero)">
-        <button class="btn btn-primary" (click)="addHero(newHero)">Add Hero</button>
+        <button class="btn btn-primary-outline" (click)="addHero(newHero)">Add Hero</button>
         <ul>
             <li *ngFor="#hero of heroService.heroes"><hero-render [hero]="hero"></hero-render></li>
         </ul>

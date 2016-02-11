@@ -5,7 +5,7 @@ import EventService from './event.service';
   selector: 'event-pub',
   template: `
         Publisher: <input type="text" #text>
-        <button (click)="update(text.value)" class="btn btn-primary btn-sm">Publish</button>
+        <button (click)="update(text.value)" class="btn btn-primary-outline btn-sm">Publish</button>
     `
 })
 export default class EventPub {
