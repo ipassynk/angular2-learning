@@ -10,8 +10,8 @@ import ImmutableDisplay from './immutable-display.componet';
   selector: 'immutable-route',
   template: `
         <div>
-           <immutable-display [data]="dataMutable" [title]="'Mutable'"></immutable-display>
-           <immutable-display [data]="dataImmutable" [title]="'Immutable'"></immutable-display>
+           <immutable-display [data]="dataMutable" title="Mutable"></immutable-display>
+           <immutable-display [data]="dataImmutable" title="Immutable"></immutable-display>
         </div>
     `,
   directives: [ImmutableDisplay]
