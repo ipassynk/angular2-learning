@@ -43,11 +43,11 @@ import ImmutableRoute from "./immutable/immutable-route.componet";
 ])
 @Component({
     selector: 'app',
-    templateUrl: 'src/app/app.html',
+    template: require('./app.html'),
     directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
         PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket, ChildRoute, ButtonControl, HttpRxjs, ImmutableRoute]
 })
-export default class App {
+export class App {
     getRoutes():Array<Object> {
         return Reflect.getMetadata('annotations', this.constructor)
             .filter(a => {

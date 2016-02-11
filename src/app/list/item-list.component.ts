@@ -19,7 +19,7 @@ export default class ItemList {
     @Input() state;
     @Output('status-change') switchStatus = new EventEmitter();
 
-    update(value, name) {
+    update(event, name) {
         this.switchStatus.emit({value: event.target.checked, name: name});
     }
 }

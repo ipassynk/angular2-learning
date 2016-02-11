@@ -4,7 +4,7 @@ import heroService from "./../services/hero.service";
 
 @Component({
     selector: 'hero-form',
-    templateUrl: 'src/app/form/hero-form.html'
+    template: require('./hero-form.html')
 })
 export default class HeroFormComponent {
     public powers:string[] = ['Smart', 'Flexible', 'Hot', 'Strong'];

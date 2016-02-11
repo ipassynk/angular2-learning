@@ -24,20 +24,12 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 
 ## Running
 
-```
-$ npm install
-```
+# install the repo with npm
+npm install
 
-You need to run two processes separately. The first will compile your TypeScript:
+# install TypeScript typings
+npm run typings-install
 
-```
-$ npm run tsc
-```
-
-To run the app locally with live reload enabled, use `npm start`:
-
-```
-$ npm start
-```
-
-This will run the app on port 8080 and open a new browser tab.
+# start the server
+npm start
+go to http://0.0.0.0:3000 or http://localhost:3000 in your browser

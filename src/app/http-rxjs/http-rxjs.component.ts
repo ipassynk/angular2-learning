@@ -47,7 +47,8 @@ export default class HttpRxjs {
         });
 
         this.clickStream
-            .flatMap(()=>Observable.forkJoin(wrongurl$, users$, promise$, timeout$, timer$, Observable.forkJoin(users1$, users2$)))
+            .flatMap(()=>Observable.forkJoin(wrongurl$, users$, promise$, timeout$, timer$,
+                Observable.forkJoin(users1$, users2$)))
             .subscribe(x =>this.data = x, err => this.data = err);
     }
 }

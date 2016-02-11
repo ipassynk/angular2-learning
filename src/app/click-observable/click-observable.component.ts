@@ -22,7 +22,7 @@ interface Item{
 })
 export default class ClickObservable {
     public items:Observable<Array<Item>>;
-    public clickStream = new Subject();
+    public clickStream = new Subject<any>();
 
     ngOnInit():void {
         let mapClick$ = this.clickStream.map(x=>x.target.name);
