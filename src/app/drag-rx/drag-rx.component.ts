@@ -7,18 +7,7 @@ import {Observable} from 'rxjs/Observable';
 @ComponentDescriptionDecorator('Mouse RX events with angular atyle attr binding')
 @Component({
   selector: 'drug-rx',
-  styles: [`
-    .box {
-        padding: 20px;
-        border: 3px dashed #b7178c;
-        height: 200px;
-      }
-
-      .box img {
-        height: 60px;
-        position: absolute;
-      }
-  `],
+  styles: [require('./drag-rx.css')],
   template: `
         <h3>Drag the cursor inside the red box and on course up the picture will follow</h3>
         <div class="box" (mousedown)="mousedown$.next($event)" (mouseup)="mouseup$.next($event)" (mousemove)="mousemove$.next($event)">
