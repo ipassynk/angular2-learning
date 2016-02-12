@@ -70,25 +70,30 @@ ReactiveX is a combination of the best ideas from the Observer pattern, the Iter
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 
 ## Key People
+Search youtube for:
 - Jeff Husein
 - André Staltz
+- Matthew Podwysowski
+- Ben Lesh
 
 # Build system
 
-TODO..
+Used An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Istanbul, TypeScript, TsLint, Typings, and Webpack by @AngularClass [angular2-webpack-starter](https://angularclass.github.io/angular2-webpack-starter/)
 
 ## Topics
-- Webpack
-- SystemJS/jspm
-- Browserify
-- CommonJS
-- RequireJS
+- What is webpack
 - Angular-cli
+- Modules
+- Bundler
 
 ##Resources
 - [webpack](https://webpack.github.io/)
+- [angular-cli](https://github.com/angular/angular-cli)
 
 #ES7
 ---
 
-TODO
+## Topics
+- Proxy
+- Async/Wait
+- ....
