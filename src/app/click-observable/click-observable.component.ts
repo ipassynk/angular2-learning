@@ -13,7 +13,7 @@ interface Item {
   changeDetection: ChangeDetectionStrategy.OnPushObserve,
   template: `
        <div>
-         <button (click)="clickStream.next($event)" name="button" class="btn btn-primary-outline">Click Me</button>
+         <button (click)="clickStream$.next($event)" name="button" class="btn btn-primary-outline">Click Me</button>
          <ul>
            <li *ngFor="#item of items | async">{{item.id}}</li>
          </ul>
@@ -22,10 +22,10 @@ interface Item {
 })
 export default class ClickObservable {
   public items:Observable<Array<Item>>;
-  public clickStream = new Subject<any>();
+  public clickStream$ = new Subject<any>();
 
   ngOnInit():void {
-    let mapClick$ = this.clickStream.map(x => x.target.name);
+    let mapClick$ = this.clickStream$.map(x => x.target.name);
     this.items = Observable.interval(1000)
       .take(10)
       .combineLatest(mapClick$)

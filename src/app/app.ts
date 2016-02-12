@@ -20,6 +20,7 @@ import ButtonControl from './button-control/button-control.component';
 import TimeoutCmp from './timeout/timeout.component';
 import HttpRxjs from './http-rxjs/http-rxjs.component';
 import ImmutableRoute from './immutable/immutable-route.componet';
+import DragRx from "./drag-rx/drag-rx.component.ts";
 
 @RouteConfig([
     {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
@@ -39,7 +40,8 @@ import ImmutableRoute from './immutable/immutable-route.componet';
     {path: '/button-control', component: ButtonControl, as: 'ButtonControl'},
     {path: '/timeout', component: TimeoutCmp, as: 'TimeoutCmp'},
     {path: '/http-rxjs', component: HttpRxjs, as: 'HttpRxjs'},
-    {path: '/immutable-route', component: ImmutableRoute, as: 'ImmutableRoute'}
+    {path: '/immutable-route', component: ImmutableRoute, as: 'ImmutableRoute'},
+    {path: '/drug-rx', component: DragRx, as: 'DragRx'}
 ])
 @Component({
     selector: 'app',
@@ -64,7 +66,7 @@ import ImmutableRoute from './immutable/immutable-route.componet';
     template: require('./app.html'),
     directives: [ROUTER_DIRECTIVES, Template, Form, List, ChildParent, TickObservable,
         PanelList, FormObservable, ClickObservable, Event, PipeHost, WebSocket,
-        ChildRoute, ButtonControl, HttpRxjs, ImmutableRoute]
+        ChildRoute, ButtonControl, HttpRxjs, ImmutableRoute, DragRx]
 })
 export class App {
     getRoutes(): Array<Object> {
