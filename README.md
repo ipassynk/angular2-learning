@@ -21,7 +21,20 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 - Timer with expiration
 - Try http with all rxjs stuff like catch, retry, join several observable
 - Immutable data example with ChangeDetectionStrategy.OnPush
-- Mouse RX events with angular atyle attr binding'
+- Mouse RX events with angular style attr binding
+
+To do:
+- fix styling
+- dynamic loading
+- server side generation
+- routing with complex decisions
+- web components
+- angular with redux
+- angular with ngrex
+- animation
+- zone (manual strategy)
+- webpack styling loading
+
 
 ## Running
 
@@ -31,6 +44,9 @@ npm install
 ## install TypeScript typings
 npm run typings-install
 
-## start the server
+## start dev server
 npm start
-go to http://0.0.0.0:3000 or http://localhost:3000 in your browser
+go to h http://localhost:3000 in your browser
+
+## Build details
+The projects uses [AngularClass/angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter). See it for testing or prod build commands

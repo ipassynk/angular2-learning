@@ -2,6 +2,10 @@
 
 Here are the main areas for the team presentation:
 
+# Disclaimer
+
+I am in the begging on my journey. I am not an expert or teacher.
+
 # Angular 2
 
 Angular version 2
@@ -15,19 +19,20 @@ Angular version 2
 - Angular-cli
 - Native browser events and binding
 - Development with typescript/es6/es5
-- Shadow dom
-- Nativescript
+- Shadow DOM
+- NativeScript
 
 ##Resources
 - [Official web site](https://angular.io)
 - [VICTOR SAVKIN Blogs](http://victorsavkin.com/)
+- [Thoughtram Blog](http://blog.thoughtram.io/categories/angular-2/)
 
 # Es6 (ES2015)
 
 ECMAScript 6 is the newest version of the ECMAScript standard. 
 
 ## Topics
-[Babel](https://babeljs.io/docs/learn-es2015/)
+Go over the following topics: [Babel](https://babeljs.io/docs/learn-es2015/)
 - Arrow function
 - Classes
 - Block scope
@@ -52,17 +57,19 @@ Any browser. Any host. Any OS. Open Source
 - support from Microsoft
 
 ## Resources
-- [TypeScript ](http://www.typescriptlang.org/)
+- [TypeScript handbook](http://www.typescriptlang.org/Handbook)
 
 # Reactive
 
 ReactiveX is a combination of the best ideas from the Observer pattern, the Iterator pattern, and functional programming
 
 ##Topics
+- What is stream
+- Benefits(out-of-order request/response, cancelable, retry, time management, integration with all async) - handling data flow
 - Promise and Observable difference
 - Functional programming
-- What is stream
 - How it is integrated with Angular 2
+- RxJava, RxCoco, RxNET, RXScala
 
 ##Resources
 - [ReactiveX](http://reactivex.io/)
@@ -79,10 +86,13 @@ Search youtube for:
 
 # Build system
 
-Used An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Dev/Prod), Karma, Protractor, Jasmine, Istanbul, TypeScript, TsLint, Typings, and Webpack by @AngularClass [angular2-webpack-starter](https://angularclass.github.io/angular2-webpack-starter/)
+Used An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Dev/Prod), Karma, 
+Protractor, Jasmine, Istanbul, TypeScript, TsLint, Typings, and Webpack by @AngularClass 
+[angular2-webpack-starter](https://angularclass.github.io/angular2-webpack-starter/)
 
 ## Topics
 - What is webpack
+- angular2-webpack-starter
 - Angular-cli
 - Modules
 - Bundler
@@ -90,6 +100,7 @@ Used An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, 
 ##Resources
 - [webpack](https://webpack.github.io/)
 - [angular-cli](https://github.com/angular/angular-cli)
+- [AngularClass/angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter)
 
 #ES7
 
@@ -97,3 +108,8 @@ Used An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, 
 - Proxy
 - Async/Wait
 - ....
+
+# Toronto local resource
+- [Rangleio blogs and presentations](http://rangle.io/)
+- [Toronto AngularJS meetup](http://www.meetup.com/AngularJS-Toronto/)
+
