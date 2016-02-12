@@ -70,12 +70,14 @@ ReactiveX is a combination of the best ideas from the Observer pattern, the Iter
 - Functional programming
 - How it is integrated with Angular 2
 - RxJava, RxCoco, RxNET, RXScala
+- Cycle.js
 
 ##Resources
 - [ReactiveX](http://reactivex.io/)
 - [A reactive programming library for JavaScript](https://github.com/ReactiveX/RxJS)
 - [RxMarbles](http://rxmarbles.com/)
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
+- [Cycle.js] (http://cycle.js.org/)
 
 ## Key People
 Search youtube for:
