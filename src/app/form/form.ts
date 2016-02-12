@@ -4,6 +4,7 @@ import HeroFormComponent from './hero_form.component';
 import ControlFormComponent from './control_form.component';
 import Highlight from './highlight.directive';
 import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import HeroService from './../services/hero.service';
 
 @ComponentDescriptionDecorator('Form...')
 @Component({
@@ -16,7 +17,8 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
             <li highlight class="list-group-item" *ngFor="#p of formctrl.selectedField">{{ p }}</li>
         </ul>
     `,
-  directives: [Highlight, ControlFormComponent, HeroFormComponent]
+  directives: [Highlight, ControlFormComponent, HeroFormComponent],
+  providers: [HeroService]
 })
 export default class FormHost {
 

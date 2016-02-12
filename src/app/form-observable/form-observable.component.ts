@@ -5,25 +5,24 @@ import ComponentDescriptionDecorator from '../decorator/conponent-description.de
 
 @ComponentDescriptionDecorator('Use observable for bind to input and display data from the observable')
 @Component({
-    selector: 'form-observable',
-    template: `
+  selector: 'form-observable',
+  template: `
       <form>
-        <input type="text" [ngFormControl]="name"/> async val: {{x | async}}
+        <input type="text" [ngFormControl]="name"/> Text value with async binding: {{x | async}}
       </form>
     `,
-    changeDetection: ChangeDetectionStrategy.OnPushObserve,
-    directives: [FORM_DIRECTIVES]
+  changeDetection: ChangeDetectionStrategy.OnPushObserve,
+  directives: [FORM_DIRECTIVES]
 })
 export default class FormObservable {
-    public x: Observable<any>;
-    public name: Control;
+  public x:Observable<any>;
+  public name:Control;
 
-    constructor() {
-        this.name = new Control();
-        this.x = this.name.valueChanges
-            .map(x => {
-                return (x.length % 2 === 0 ? x.toUpperCase() : x.toLowerCase());
-            })
-            .do(x => console.log(x));
-    }
+  constructor() {
+    this.name = new Control();
+    this.x = this.name.valueChanges
+      .map(x => {
+        return (x.length % 2 === 0 ? x.toUpperCase() : x.toLowerCase());
+      });
+  }
 }

@@ -5,15 +5,17 @@ import Hero from './../model/hero';
     selector: 'hero-render',
     styles: [`
     .hero-red {
-        background-color: red;
+        background-color: #a94442;
         text-decoration: line-through;
         text-line-through-color: black;
     }
-    .hero-green {
-        background-color: #42A948;
+    .hero-yellow {
+        background-color: #fcf8e3;
     }
     .hero {
-        padding: 20px 0;
+        padding: 20px;
+        margin: 5px;
+        border-radius: 5px;
     }
     `],
     template: `
@@ -26,6 +28,6 @@ export default class HeroRender {
     @Input()  hero: Hero;
 
     getHeroClass() {
-        return this.hero.name === 'Julia' ? 'hero-red' : 'hero-green';
+        return this.hero.name === 'Julia' ? 'hero-red' : 'hero-yellow';
     }
 }

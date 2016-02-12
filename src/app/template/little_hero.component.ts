@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
 
-import heroService from './../services/hero.service';
+import HeroService from './../services/hero.service';
 import Hero from './../model/hero';
 import heroRender from './hero_render.component';
 
@@ -19,7 +19,7 @@ import heroRender from './hero_render.component';
 export default class LittleTour {
   public hidden:boolean = true;
 
-  constructor(public heroService:heroService) {
+  constructor(public heroService:HeroService) {
   }
 
   addHero(newHero) {
