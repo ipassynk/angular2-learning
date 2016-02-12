@@ -5,6 +5,8 @@ Here are the main areas for the team presentation:
 # Disclaimer
 
 I am in the begging on my journey. I am not an expert or teacher.
+Here is my learning examples
+[Julia Passynkova Angular 2 Learning](https://github.com/ipassynk/angular2-learning)
 
 # Angular 2
 
