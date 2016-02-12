@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
-import {Subject} from "rxjs/Subject";
-import {ChangeDetectionStrategy} from "angular2/core";
-import ComponentDescriptionDecorator from "../decorator/conponent-description.decorator";
-import {Observable} from "rxjs/Observable";
+import {Subject} from 'rxjs/Subject';
+import {ChangeDetectionStrategy} from 'angular2/core';
+import ComponentDescriptionDecorator from '../decorator/conponent-description.decorator';
+import {Observable} from 'rxjs/Observable';
 
 @ComponentDescriptionDecorator('Mouse RX events with angular atyle attr binding')
 @Component({

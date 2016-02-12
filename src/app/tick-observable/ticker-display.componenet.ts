@@ -3,7 +3,7 @@ import Ticker from './ticker.service';
 import {OnInit} from 'angular2/core';
 import 'rxjs/operator/throttleTime';
 import {Subject} from 'rxjs/Subject';
-import {Observable} from "rxjs/Observable";
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'ticker-display',

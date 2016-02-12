@@ -20,7 +20,7 @@ import ButtonControl from './button-control/button-control.component';
 import TimeoutCmp from './timeout/timeout.component';
 import HttpRxjs from './http-rxjs/http-rxjs.component';
 import ImmutableRoute from './immutable/immutable-route.componet';
-import DragRx from "./drag-rx/drag-rx.component.ts";
+import DragRx from './drag-rx/drag-rx.component';
 
 @RouteConfig([
     {path: '/click-observable', component: ClickObservable, as: 'ClickObservable'},
