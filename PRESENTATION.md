@@ -91,7 +91,6 @@ Used An Angular 2 Webpack Starter kit featuring Angular 2 (Router, Http, Forms, 
 - [angular-cli](https://github.com/angular/angular-cli)
 
 #ES7
----
 
 ## Topics
 - Proxy
