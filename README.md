@@ -23,7 +23,7 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 - Immutable data example with ChangeDetectionStrategy.OnPush
 - Mouse RX events with angular style attr binding
 
-To do:
+My TODO:
 - fix styling
 - dynamic loading
 - server side generation
