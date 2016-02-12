@@ -67,6 +67,7 @@ ReactiveX is a combination of the best ideas from the Observer pattern, the Iter
 ##Resources
 - [ReactiveX](http://reactivex.io/)
 - [A reactive programming library for JavaScript](https://github.com/ReactiveX/RxJS)
+- [RxMarbles](http://rxmarbles.com/)
 - [The introduction to Reactive Programming you've been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754)
 
 ## Key People
