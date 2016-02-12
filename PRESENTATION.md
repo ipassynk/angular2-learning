@@ -1,6 +1,6 @@
 # Angular 2, es6/es7, TypeScript, RxJs Next 
 
-Here is the main points for the team presentation:
+Here are the main areas for the team presentation:
 
 # Angular 2
 
