@@ -1,6 +1,6 @@
 # I am learning Angular 2 and RxJS
 
-[View Online Demo](http://ipassynk.github.io/angular2-learning/dist/)
+[View Online Demo at http://ipassynk.github.io/angular2-learning/dist/](http://ipassynk.github.io/angular2-learning/dist/)
 
 I am learning angular 2 now. The repo contains the folloiwng examples:
 - Reflection to build list of routes
