@@ -3,11 +3,10 @@
 Here is the main points for the team presentation:
 
 # Angular 2
----
 
 Angular version 2
 
-## Talk why?
+## Topics
 - Faster (digest/zone)
 - Server side rendering
 - Simpler syntax
@@ -24,11 +23,10 @@ Angular version 2
 - [VICTOR SAVKIN Blogs](http://victorsavkin.com/)
 
 # Es6 (ES2015)
----
 
 ECMAScript 6 is the newest version of the ECMAScript standard. 
 
-## Talk
+## Topics
 [Babel](https://babeljs.io/docs/learn-es2015/)
 - Arrow function
 - Classes
@@ -44,13 +42,12 @@ ECMAScript 6 is the newest version of the ECMAScript standard.
 - [Traceur] (https://github.com/google/traceur-compiler)
 
 # TypeScript
----
 
 TypeScript lets you write JavaScript the way you really want to.
 TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 Any browser. Any host. Any OS. Open Source
 
-## Talk
+## Topics
 - what is solves
 - support from Microsoft
 
@@ -58,11 +55,10 @@ Any browser. Any host. Any OS. Open Source
 - [TypeScript ](http://www.typescriptlang.org/)
 
 # Reactive
----
 
 ReactiveX is a combination of the best ideas from the Observer pattern, the Iterator pattern, and functional programming
 
-##Talk
+##Topics
 - Promise and Observable difference
 - Functional programming
 - What is stream
@@ -78,11 +74,10 @@ ReactiveX is a combination of the best ideas from the Observer pattern, the Iter
 - André Staltz
 
 # Build system
----
 
 TODO..
 
-## Talk
+## Topics
 - Webpack
 - SystemJS/jspm
 - Browserify

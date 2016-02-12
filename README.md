@@ -21,6 +21,7 @@ I am learning angular 2 now. The repo contains the folloiwng examples:
 - Timer with expiration
 - Try http with all rxjs stuff like catch, retry, join several observable
 - Immutable data example with ChangeDetectionStrategy.OnPush
+- Mouse RX events with angular atyle attr binding'
 
 ## Running
 
