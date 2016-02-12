@@ -22,7 +22,7 @@ import {Observable} from 'rxjs/Observable';
   template: `
         <h3>Drag the cursor inside the red box and on course up the picture will follow</h3>
         <div class="box" (mousedown)="mousedown$.next($event)" (mouseup)="mouseup$.next($event)" (mousemove)="mousemove$.next($event)">
-            <img [style.left]="left$ | async" [style.top]="top$ | async" src="http://reactivex.io/assets/Rx_Icon.png">
+            <img [style.left]="left$ | async" [style.top]="top$ | async" src="assets/Rx_Icon.png">
         </div>
     `
   , changeDetection: ChangeDetectionStrategy.OnPushObserve

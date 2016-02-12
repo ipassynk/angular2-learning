@@ -5,25 +5,23 @@
 </header>
 
 <main>
-    <div class="jumbotron">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="jumbotron">
+    <router-outlet>
+      <h3 class="text-xs-center">Angular 2 Play Box</h3>
+    </router-outlet>
+  </div>
 
-    <div class="card-deck-wrapper">
-        <div class="card-deck">
-            <div class="row">
-            <div class="col-sm-2" *ngFor="#route of getRoutes()">
-            <div class="card text-xs-center" >
-                <h3 class="card-header">{{ route.name }}</h3>
-                <div class="card-block">
-                    <p class="card-text" [innerHTML]="getDescription(route.component)"></p>
-                    <a [routerLink]="[route.as]" class="btn btn-primary-outline">Show</a>
-                </div>
-            </div>
-            </div>
-                </div>
-        </div>
+  <div class="row">
+    <div class="col-sm-6" *ngFor="#route of getRoutes()">
+      <div class="card text-xs-center">
+          <h3 class="card-header">{{ route.name }}</h3>
+          <div class="card-block">
+              <p class="card-text" [innerHTML]="getDescription(route.component)"></p>
+              <a [routerLink]="[route.as]" class="btn btn-primary">Show</a>
+          </div>
+      </div>
     </div>
+  </div>
 </main>
 
 <footer>

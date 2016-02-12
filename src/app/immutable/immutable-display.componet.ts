@@ -5,7 +5,7 @@ import {ChangeDetectionStrategy} from 'angular2/core';
   selector: 'immutable-display',
   template: `
         <div>
-            <h3>{{ title }}</h3>
+            <h4>{{ title }}</h4>
             data.x = {{ data.x }}
         </div>
     `,
